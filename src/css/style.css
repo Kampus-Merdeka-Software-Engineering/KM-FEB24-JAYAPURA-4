@@ -13,7 +13,7 @@ body{
 
 aside{
     background-color: #0E1F40  ;
-    width: 400px;
+    width: 300px;
     padding: 35px 25px;
     display: flex; 
     flex-direction: column;
@@ -24,21 +24,19 @@ aside{
 aside header{
     display: flex;
     box-sizing: border-box;
-    /* margin-bottom: 25px; */
-    /* padding: 15px 10px; */
     gap: 25px;
     padding: none;
 }
 
 
 aside .icon{
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
     background-color: var(--background-color3);
 }
 
 aside header h2{
-    font-size: 30px;
+    font-size: 23px;
     color: #ffffff;
     font-weight: 600;
 }
@@ -47,14 +45,15 @@ aside header h2{
 nav{
     display: flex;
     flex-direction: column;
-    gap: 60px;
-    padding: none;
+    /* padding: none; */
+    box-sizing: border-box;
+    gap: 25px;
 }
 
 nav section{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
 }
 
 nav section .list-item {
@@ -65,13 +64,13 @@ nav section .list-item {
     gap: 20px;
 } 
 
-nav h4{
+nav h5{
     color: #ffffff;
 }
 
 nav section .list-item .icon2{
-    width: 53px;
-    height: 59px;
+    width: 33px;
+    height: 39px;
     background-color: var(--background-color3);
 }
 
@@ -79,30 +78,32 @@ nav ul{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-left: 40px;
+    margin-left: 10px;
     color: #ffffff;
+    list-style: none;
 }
 
 nav section li .list-item .icon2{
-    width: 33px;
-    height: 39px;
+    width: 23px;
+    height: 23px;
     background-color: var(--background-color3);
 }
 
 nav .list-item .description {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
 }
 
 nav li .list-item .description {
     font-weight: 100;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
 }
 
-nav section a{
+nav a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 nav section a:hover{
@@ -111,20 +112,25 @@ nav section a:hover{
 }
 
 
-.header2{
+main{
+    background-color: #ffffff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+main header{
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
-    height: 130px;
+    height: 110px;
     background-color: #0E1F40  ;
     color: #ffffff;
     padding: 20px;
 }
 
-/* .headbar .searchbar{
-    
-} */
 
 .searchbar{
     display: flex;
@@ -138,40 +144,175 @@ nav section a:hover{
     align-items: center;
     border: 1px solid white;
     justify-content: center; 
-    border-radius: 8px 0 0 8px; 
-    border-right: none;
+    border-radius: 0px 8px 8px 0px; 
+    border-left: none;
     cursor: pointer
 }
 
 .searchbar .searchbtn img{
-    width: 35px;
+    width: 25px;
 }
 
 .searchbar input { 
     color: #ffffff;
-    width: 300px; 
+    width: 250px; 
     font-weight: 100;
-    border-radius: 0px 8px 8px 0px; 
+    border-radius: 8px 0px 0px 8px; 
     border: 1px solid white;
-    font-size: 20px;
-    border-left: none;
+    font-size: 18px;
+    padding-left: 10px;
+    border-right: none;
     outline: none;
 }
 
 .searchbar input, .searchbtn{
-    height: 42px;
+    height: 32px;
     box-sizing: border-box;
     background-color: var(--background-color3); 
 }
 
 .profile{
-    height: 50px;
+    height: 40px;
 }
 
-main{
-    background-color: #ffffff;
-    flex-grow: 1;
+.main_content{
     display: flex;
     flex-direction: column;
+    padding: 45px;
+    box-sizing: border-box;
+    gap: 65px;
 }
 
+.filt{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 5px;
+}
+
+.filt select, button{
+    background-color: #f5f5f5;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.filt select{
+    height: 40px;
+    width: 200px;
+    border-radius: 9px;
+
+}
+
+.filt button{
+    height: 40px;
+    width: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-score{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.box-scorecard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 296px;
+    height: 126px;
+    border: 0.5px solid #d1d9e9;
+    border-radius: 15px;
+    background: linear-gradient(to right, #3375F4 0%, #ffffff 100%, #3375F4 100%, #ffffff 100%);
+    z-index:auto;
+    gap: 30px;
+}
+
+.value{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.chart{
+    display: flex;
+    justify-content: center;
+}
+
+.chart-grid{
+    width: 90%;
+    height: 90vb;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "c1 c1 c2 c2"
+        "c3 c3 c3 c4";
+    text-align: center;
+    gap: 35px;
+}
+
+.c{
+    background-color: #d1d9e9;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.c:nth-child(1){
+    grid-area: c1;
+}
+
+
+.c:nth-child(2){
+    grid-area: c2;
+}
+
+.c:nth-child(3){
+    grid-area: c3;
+}
+
+.c:nth-child(4){
+    grid-area: c4;
+}
+
+main footer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "f1 f2";
+    padding: 70px 30px 20px;
+}
+
+footer .cite{
+    grid-area: f1;
+    align-content: end;
+}
+
+footer .media{
+    grid-area: f2;
+}
+
+footer .socialIcn{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+footer .socialIcn a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #d1d9e9;
+    border-radius: 50%;
+}
+
+footer .socialIcn a:hover{
+    background-color: #2E5DB7;
+    transition: 0.5s;
+}
+
+footer .socialIcn a:hover i{
+    color: #ffffff;
+    transition: 0.5s;
+}

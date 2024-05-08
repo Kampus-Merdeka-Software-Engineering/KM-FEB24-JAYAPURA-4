@@ -11,9 +11,18 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
+        <!-- icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- vending style -->
 
         <link rel="stylesheet" href="src/css/style.css">
+
+        <!-- Botstrap -->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     </head>
 
@@ -23,14 +32,14 @@
 
             <header>
                 <img src="src/img/2-removebg-preview_2-removebg-preview.png" alt="vendinglogo"  class="icon">
-                <h4>BRUNSWICK SQ MALL VENDING MACHINE</h4>
+                <h2>BRUNSWICK SQ MALL VENDING MACHINE</h2>
             </header>
 
             <nav>
                 
-                <h4 class="list-item">
+                <h5 class="list-item">
                     MENU
-                </h4>
+                </h5>
 
                 <section>
 
@@ -107,138 +116,149 @@
         
         </aside>
 
-        <header class="header2">
-            <h2>
-                Dashboard
-            </h2>
-
-            <section>
-
-                <form class="searchbar" action="">
-        
-                    <input type="text" placeholder="Search...." name="search">
-
-                    <button class="searchbtn" type="submit">
-                        <img src="src/img/searchicon.png" alt="">
-                    </button>
-
-                </form>
-
-            </section>
-
-            <section>
-
-                <a href="#">
-                    <!-- <h4>Team 4 Jayapura</h4> -->
-                    <img src="src/img/team 4 jayapura 1.svg" alt="profilepict" class="profile">
-                </a>
-            </section>
-
-        </header>
-
         <main>
 
-            <section>
+            <header>
 
-                <article>
-                    <select name="filter" id="filter">
-                        <option value="filter">Filter</option>
-                        <option value="BSQ-Mall-x1366-ATT">BSQ Mall x1366-ATT</option>
-                        <option value="BSQ-Mall-x1366-Zales">BSQ Mall x1366-Zales</option>
-                    </select>
-                </article>
+                <h3>
+                    Dashboard
+                </h3>
+    
+                <section>
+    
+                    <form class="searchbar" action="">
+            
+                        <input type="text" placeholder="Search...." name="search">
+    
+                        <button class="searchbtn" type="submit">
+                            <img src="src/img/searchicon.png" alt="">
+                        </button>
+    
+                    </form>
+    
+                </section>
                 
-                <article>
-                    <button type="button">Clear</button>
-                </article>
+    
+                <section>
+    
+                    <a href="#">
+                        <img src="src/img/team 4 jayapura 1.svg" alt="profilepict" class="profile">
+                    </a>
+
+                </section>
+    
+            </header>
+
+            <main class="main_content">
+
+                <section class="filt">
+
+                    <article>
+                        <select name="filter" id="filter">
+                            <option value="filter">Filter</option>
+                            <option value="BSQ-Mall-x1366-ATT">BSQ Mall x1366-ATT</option>
+                            <option value="BSQ-Mall-x1366-Zales">BSQ Mall x1366-Zales</option>
+                        </select>
+                    </article>
+                    
+                    <article>
+                        <button type="button">Clear</button>
+                    </article>
+                    
+                </section>
+
+                <section class="card-score">
+
+                    <article id="score-card" class="box-scorecard">
+
+                        <img src="src/img/card1.svg" alt="scoreicon" class="scorecard">
+
+                        <div class="value">
+                            <span id="sales-per-day">0</span>
+                            <label for="sales-per-day">Sales Per Day</label>
+                        </div>
+
+                    </article>
+
+                    <article id="score-card" class="box-scorecard">
+                        
+                        <img src="src/img/card2.svg" alt="scoreicon" class="scorecard">
+
+                        <div class="value">
+                            <span id="sales-per-day">0</span>
+                            <label for="sales-per-day">Total Revenue</label>
+                        </div>
+                        
+                    </article>
+
+                    <article id="score-card" class="box-scorecard">
+                        
+                        <img src="src/img/card3.svg" alt="scoreicon3" class="scorecard">
+
+                        <div class="value">
+                            <span id="total-product-sold">0</span>
+                            <label for="sales-per-day">Total Product Sold</label>
+                        </div>
+
+                    </article>
+
+                </section>
+
+                <section class="chart">
+
+                    <section class="chart-grid">
+                        
+                        <article class="c">
+                            <label for="chart1">Top Category Per Month</label>
+                            <!-- <canvas id="chart1"></canvas> -->
+                        </article>
+
+                        <article class="c">
+                            <label for="chart2">Top 10 Most Sold Product</label>
+                            <!-- <canvas id="chart2"></canvas> -->
+                        </article>
+                        
+                        <article class="c">
+                            <label for="chart3">Average Price Per Product</label>
+                            <!-- <canvas id="chart3"></canvas> -->
+                        </article>
+
+                        <article class="c">
+                            <label for="chart4">Average Transaction Value Per Payment Method</label>
+                            <!-- <canvas id="chart4"></canvas> -->
+                        </article>
+
+                    </section>
+
+                </section>
+
+                </main>
+
+            <footer>
                 
-            </section>
-
-            <section>
-
-                <article id="score-card">
-                    <img src="" alt="scoreicon" class="scorecard">
-                    <span id="sales-per-day">0</span>
-                    <label for="sales-per-day">Sales Per Day</label>
-                </article>
-
-                <article id="score-card">
-                    <img src="" alt="scoreicon2" class="scorecard">
-                    <span id="total-revenue">0</span>
-                    <label for="total-revenue">Total Revenue</label>
-                </article>
-
-                <article id="score-card">
-                    <img src="" alt="scoreicon3" class="scorecard">
-                    <span id="total-product-sold">0</span>
-                    <label for="sales-per-day">Total Product Sold</label>
-                </article>
-
-            </section>
-
-            <section>
+                <section class="cite">
+                    
+                    <article>
+                        Copyright &copy;2024; Designed by jayapura Team 4
+                    </article>
+                    
+                </section>
                 
-                <article>
-                    <label for="chart1">Top Category Per Month</label>
-                    <canvas id="chart1"></canvas>
-                </article>
+                <section class="media">
 
-                <article>
-                    <label for="chart2">Top 10 Most Sold Product</label>
-                    <canvas id="chart2"></canvas>
-                </article>
+                    <section class="socialIcn">
+        
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-google fa-gmail"></i></a>
 
-                <article>
-                    <label for="chart3">Average Price Per Product</label>
-                    <canvas id="chart3"></canvas>
-                </article>
-
-                <article>
-                    <label for="chart4">Average Transaction Value Per Payment Method</label>
-                    <canvas id="chart4"></canvas>
-                </article>
-
-            </section>
+                    </section>
+        
+                    </section>
+          
+            </footer>
 
         </main>
-
-        <footer>
-
-            <section>
-
-                <article>
-                    <a href="#" class="iconfoot">
-                        <img src="img/INSTA.svg" alt="instagram" class="imgfoot">
-                    </a>
-                </article>
-
-                <article>
-                    <a href="#" class="iconfoot">
-                        <img src="img/GITHUB.svg" alt="github" class="imgfoot">
-                    </a>
-                </article>
-
-                <article>
-                    <a href="#" class="iconfoot">
-                        <img src="img/EMAIL.svg" alt="email" class="imgfoot">
-                    </a>
-                </article>
-
-            </section>
-
-            <section>
-                <h6 class="footerteam">JAYAPURA IV</h6>
-            </section>
-
-            <section>
-                <p>© copyright 2024</p>
-            </section>
-          
-            <section>
-                <h6>team4.jayapura@gmail.com</h6>
-            </section>
-      
-        </footer>
 
     </body>
 
