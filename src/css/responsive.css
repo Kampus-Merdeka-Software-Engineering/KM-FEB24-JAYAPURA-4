@@ -1,0 +1,111 @@
+@media screen and (max-width: 768px) {
+
+    #side-bar{
+        width: 210px;
+    }
+
+    #side-bar .icon{
+        width: 70px;
+        height: 80px;
+        background-color: var(--background-color3);
+    }
+    
+    #side-bar .sidebar-header h2{
+        font-size: 15px;
+        color: #ffffff;
+        font-weight: 500;
+    }
+
+    #content{
+        width: calc(100% - 80px);
+        left: 210px;
+    }
+
+    .cite{
+        font-size: 10px;
+    }
+    
+    .socialIcn{
+       font-size: 10px;
+    }
+
+    #content .main_content .card-score .box-scorecard{
+        width: 100%;
+    }
+
+    .chart-grid{
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        justify-items: center;
+        grid-template-areas: 
+            "c1 c2" "c3 c4";
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+
+    .c{
+        width: 230px;
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    #content .head-main form .searchbar input{
+        display: none;
+    }
+
+    #content .head-main form .searchbar .searchbtn{
+        width: auto;
+        height: auto;
+        background: transparent;
+        border-radius: none;
+    }
+    
+    #content .head-main form.show .searchbar input {
+        display: block;
+        width: 100%;
+    }
+
+    #content .head-main form.show .searchbar .searchbtn {
+        width: 36px;
+        height: 100%;
+        border-radius: 0 35px 35px 0px;
+        background-color: red;
+    }
+
+    #content .head-main form.show ~ .profile{
+        display: none;
+    }
+
+    #content .main_content .dash-head{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #content .main_content .card-score .box-scorecard{
+        width:100%;
+        height: 100px;
+    }
+
+    .chart-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        justify-items: center;
+        grid-template-areas: 
+        "c1" "c2" 
+        "c3" "c4";
+        gap: 35px;
+        margin-bottom: 25px;
+    }
+
+    .c{
+        width: 300px;
+        height: 150px;
+    }
+    
+}
