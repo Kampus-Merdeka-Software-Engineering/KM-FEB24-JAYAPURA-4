@@ -13,42 +13,44 @@
 
         <!-- icon -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
         <!-- vending style -->
 
         <link rel="stylesheet" href="src/css/style.css">
-
-        <!-- Botstrap -->
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="src/css/responsive.css">
 
     </head>
 
     <body>
 
-        <aside>
+        <!-- SIDEBAR -->
+        <aside id="side-bar">
 
-            <header>
+            <header class="sidebar-header">
                 <img src="src/img/2-removebg-preview_2-removebg-preview.png" alt="vendinglogo"  class="icon">
                 <h2>BRUNSWICK SQ MALL VENDING MACHINE</h2>
             </header>
 
-            <nav>
+            <h5>
+                MENU
+            </h5>
+
+            <nav class="nav-sidebar">
                 
-                <h5 class="list-item">
-                    MENU
-                </h5>
+                
 
                 <section>
 
-                    <a href="index.html" class="list-item">
-                        <img src="src/img/dashicon.png" alt="dashimage" class="icon2">
-                        <label for="dash" class="description">Dashboard</label>
-                    </a>
-
                     <ul>
+
+                        <li>
+                            <a href="#content" class="list-item">
+                                <img src="src/img/dashicon.png" alt="dashimage" class="icon2">
+                                <label for="dash" class="description">Dashboard</label>
+                            </a>
+                        </li>
+                        
                         <li>
                             <a href="#" class="list-item">
                                 <img src="src/img/TCPM.svg" alt="dashimage" class="icon2">
@@ -82,12 +84,15 @@
 
                 <section>
 
-                    <a href="#" class="list-item">
-                        <img src="src/img/analytics-xxl.png" alt="teamreportimage" class="icon2">
-                        <label for="analytics" class="description">Analytics</label>
-                    </a>
-
                     <ul>
+
+                        <li>
+                            <a href="#" class="list-item">
+                                <img src="src/img/analytics-xxl.png" alt="teamreportimage" class="icon2">
+                                <label for="analytics" class="description">Analytics</label>
+                            </a>
+                        </li>
+
                         <li>
                             <a href="#" class="list-item">
                                 <img src="src/img/team-svgrepo-com.svg" alt="aboutusimage" class="icon2">
@@ -106,34 +111,43 @@
                 </section>
 
                 <section>
-                    <a href="#" class="list-item">
-                        <img src="src/img/about-svgrepo-com.svg" alt="aboutusimage" class="icon2">
-                        <label for="aboutus" class="description">About Us</label>
-                    </a>
+                    <ul>
+                        <li>
+                            <a href="#" class="list-item">
+                                <img src="src/img/about-svgrepo-com.svg" alt="aboutusimage" class="icon2">
+                                <label for="aboutus" class="description">About Us</label>
+                            </a>
+                        </li>
+                    </ul>
                 </section>
 
             </nav>
         
         </aside>
+        <!-- SIDEBAR -->
 
-        <main>
+        <!-- CONTENT -->
+        <main id="content">
 
-            <header>
+            <header class="head-main">
 
-                <h3>
-                    Dashboard
-                </h3>
-    
                 <section>
+                    <i class='bx bx-menu'></i>
+                </section>
+                <section class="form">
     
-                    <form class="searchbar" action="">
-            
-                        <input type="text" placeholder="Search...." name="search">
-    
-                        <button class="searchbtn" type="submit">
-                            <img src="src/img/searchicon.png" alt="">
-                        </button>
-    
+                    <form action="">
+
+                        <div class="searchbar" >
+                
+                            <input type="text" placeholder="Search...." name="search">
+        
+                            <button class="searchbtn" type="submit">
+                                <i class='bx bx-search' ></i>
+                            </button>
+
+                        </div>
+        
                     </form>
     
                 </section>
@@ -142,7 +156,7 @@
                 <section>
     
                     <a href="#">
-                        <img src="src/img/team 4 jayapura 1.svg" alt="profilepict" class="profile">
+                        <img src="src/img/logoteam.png" alt="profilepict" class="profile">
                     </a>
 
                 </section>
@@ -151,23 +165,27 @@
 
             <main class="main_content">
 
-                <section class="filt">
+                <section class="dash-head">
 
-                    <article>
+                    <h3>
+                        Dashboard
+                    </h3>
+
+                    <article class="filt">
+
                         <select name="filter" id="filter">
                             <option value="filter">Filter</option>
                             <option value="BSQ-Mall-x1366-ATT">BSQ Mall x1366-ATT</option>
                             <option value="BSQ-Mall-x1366-Zales">BSQ Mall x1366-Zales</option>
                         </select>
-                    </article>
                     
-                    <article>
                         <button type="button">Clear</button>
+
                     </article>
                     
                 </section>
 
-                <section class="card-score">
+                <ul class="card-score">
 
                     <article id="score-card" class="box-scorecard">
 
@@ -175,34 +193,34 @@
 
                         <div class="value">
                             <span id="sales-per-day">0</span>
-                            <label for="sales-per-day">Sales Per Day</label>
+                            <label for="sales-per-day"> Sales Per Day</label>
                         </div>
 
                     </article>
 
                     <article id="score-card" class="box-scorecard">
                         
-                        <img src="src/img/card2.svg" alt="scoreicon" class="scorecard">
+                        <img src="src/img/card3.svg"  alt="scoreicon" class="scorecard">
 
                         <div class="value">
                             <span id="sales-per-day">0</span>
-                            <label for="sales-per-day">Total Revenue</label>
+                            <label for="sales-per-day">Total Product Sold</label>
                         </div>
                         
                     </article>
 
                     <article id="score-card" class="box-scorecard">
                         
-                        <img src="src/img/card3.svg" alt="scoreicon3" class="scorecard">
+                        <img src="src/img/card2.svg"alt="scoreicon3" class="scorecard">
 
                         <div class="value">
                             <span id="total-product-sold">0</span>
-                            <label for="sales-per-day">Total Product Sold</label>
+                            <label for="sales-per-day">Total Revenue</label>
                         </div>
 
                     </article>
 
-                </section>
+                </ul>
 
                 <section class="chart">
 
@@ -234,7 +252,7 @@
 
                 </main>
 
-            <footer>
+            <footer class="footer">
                 
                 <section class="cite">
                     
@@ -259,7 +277,8 @@
             </footer>
 
         </main>
-
+        <!-- CONTENT -->
+        <script src="src/js/index.js"></script>
     </body>
 
 </html>
