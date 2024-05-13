@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 li{
@@ -11,6 +12,7 @@ li{
 body{
     display: flex;    /* flex box */
     min-height: 100vh;    /* view for height => supaya tinggiya memenuhi screen dari layarnya */
+    background-color: #f3f4f7;
 }
 
 #side-bar{
@@ -18,7 +20,7 @@ body{
     top: 0;
     left: 0;
     z-index: 2000;
-    background-color: #0E1F40  ;
+    background-color: #3375F4 ;
     width: 260px;
     height: 100%;
     padding: 30px 20px;
@@ -27,6 +29,7 @@ body{
     gap: 50px;
     transition: all ease-in .3s;
     overflow-x: hidden;
+    
 }
 
 #side-bar::-webkit-scrollbar {
@@ -49,12 +52,12 @@ body{
 }
 
 #side-bar .icon{
-    width: 100px;
-    height: 110px;
+    width: 70px;
+    height: 70px;
     background-color: var(--background-color3);
 }
 
-#side-bar .sidebar-header h2{
+#side-bar .sidebar-header h4{
     font-size: 20px;
     color: #ffffff;
     font-weight: 600;
@@ -85,6 +88,7 @@ body{
     align-items: center;
     box-sizing: border-box;
     gap: 20px;
+    padding: 10px;
 } 
 
 #side-bar h5{
@@ -98,15 +102,16 @@ body{
 .nav-sidebar ul{
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
     margin-left: 5px;
     color: #ffffff;
     list-style: none;
+    
 }
 
 li .list-item .icon2{
     width: 30px;
-    height: 36px;
+    height: 30px;
     background-color: var(--background-color3);
 }
 
@@ -116,6 +121,8 @@ li .list-item .description {
     font-size: 15px;
     color: #ffffff;
     cursor: pointer;
+    font-weight: 100;
+
 }
 
 #side-bar.hide li .list-item .description {
@@ -128,9 +135,10 @@ li .list-item .description {
 
 
 #side-bar section a:hover{
-    background: #2E5DB7;
+    background: #2262d8;
     transition: all ease-in .2s;
     border-radius: 15px;
+    padding: 10px;
 }
 
 #content{
@@ -150,8 +158,7 @@ li .list-item .description {
     display: flex;
     align-items: center;
     grid-gap: 40px;
-    background-color: #0E1F40  ;
-    color: #ffffff;
+    color: #3375F4;
     padding: 20px;
     position: sticky;
     top: 0;
@@ -180,7 +187,7 @@ li .list-item .description {
     padding: 0 16px;
     height: 100%;
     border: none;
-    background-color: #d1d9e9;
+    background-color: #ffffff;
     border-radius: 35px 0 0 35px;
     width: 100%;
     outline: none;
@@ -193,7 +200,7 @@ li .list-item .description {
     justify-content: center;
     align-items: center;
     background-color: #3375F4;
-    color: #d1d9e9;
+    color: #ffffff;
     font-size: 18px;
     border: none;
     outline: none;
@@ -223,8 +230,8 @@ li .list-item .description {
 }
 
 .main_content .dash-head h3{
-    font-size: 35px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 500;
     color: #0f357b;
 }
 
@@ -236,25 +243,30 @@ li .list-item .description {
 }
 
 .filt select, button{
-    background-color: #f5f5f5;
-    border: none;
-    color: #0f357b;
-    font-size: 16px;
+    background-color: #ffffff;
+    border: 0.5px solid #c0c0c0;
+    color: #1a1a1a;
+    font-size: 13px;
     font-weight: 500;
 }
 
 .filt select{
-    height: 35px;
-    width: 190px;
+    height: 30px;
+    width: 90px;
     border-radius: 9px;
+    text-align: center;
+    font-weight: 100;
+
 
 }
 
 .filt button{
-    height: 35px;
-    width: 55px;
-    border-radius: 5px;
+    height: 28px;
+    width: 90px;
+    border-radius: 9px;
     cursor: pointer;
+    font-weight: 100;
+
 }
 
 #content .main_content .card-score {
@@ -269,10 +281,17 @@ li .list-item .description {
     display: flex;
     align-items: center;
     padding: 24px;
-    border: 0.5px solid #d1d9e9;
     border-radius: 15px;
-    background: linear-gradient(to right, #3375F4 0%, #ffffff 100%, #3375F4 100%, #ffffff 100%);
+    background: #ffffff;
     gap: 30px;
+}
+
+.scorecard{
+    width: 40px;
+    height: 40px;
+    background-color: #547fff;
+    border-radius: 100%;
+    padding: 5px;
 }
 
 .value{
@@ -282,8 +301,15 @@ li .list-item .description {
 }
 
 .value label{
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 11px;
+    font-weight: 100;
+    color: #000000;
+}
+
+.value span{
+    font-size: 25px;
+    font-weight: 500;
+    color: #0f357b;
 }
 
 .chart{
@@ -305,7 +331,7 @@ li .list-item .description {
 }
 
 .c{
-    background-color: #d1d9e9;
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
 }
@@ -358,12 +384,18 @@ li .list-item .description {
 .socialIcn a{
     text-decoration: none;
     padding: 10px;
-    background-color: #d1d9e9;
-    border-radius: 50%;
+    background-color: #ffffff;
+    border-radius: 100%;
 }
 
+.socialIcn a i{
+    color: #3375F4;
+    transition: 0.5s;
+}
+
+
 .socialIcn a:hover{
-    background-color: #2E5DB7;
+    background-color: #3375F4;
     transition: 0.5s;
 }
 
