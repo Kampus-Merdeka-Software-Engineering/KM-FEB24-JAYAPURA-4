@@ -21,10 +21,6 @@
         left: 210px;
     }
 
-    #content .head-main form .searchbar .searchbtn{
-        color: #3375F4;
-    }
-
     .main_content .dash-head h3{
         font-size: 18px;
     }
@@ -86,6 +82,10 @@
         height: 100%;
         border-radius: 0 35px 35px 0px;
         background-color: red;
+    }
+
+      #content .head-main form .searchbar .searchbtn{
+        color: #3375F4;
     }
 
     #content .head-main form.show ~ .profile{

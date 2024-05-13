@@ -5,12 +5,6 @@ menuBar.addEventListener('click', function() {
     sidebar.classList.toggle('hide');
 })
 
-window.addEventListener('resize', function(){
-    if (this.innerWidth < 768) {
-        sidebar.classList.add('hide');
-    }
-});
-
 const searchButton = document.querySelector('#content .head-main form .searchbar .searchbtn');
 const searchButtonIcon = document.querySelector('#content .head-main form .searchbar .searchbtn .bx');
 const searchForm = document.querySelector('#content .head-main form')
@@ -28,8 +22,21 @@ searchButton.addEventListener('click', function (e){
 })
 
 window.addEventListener('resize', function(){
+    if (this.innerWidth < 768) {
+        sidebar.classList.add('hide');
+    }
+});
+
+window.addEventListener('resize', function(){
     if(this.innerWidth > 576){
         searchButtonIcon.classList.replace('bx-x', 'bx-search')
         searchForm.classList.remove('show')
     }
 });
+
+if(window.innerWidth < 768) {
+	sidebar.classList.add('hide');
+} else if(window.innerWidth > 576) {
+	searchButtonIcon.classList.replace('bx-x', 'bx-search');
+	searchForm.classList.remove('show');
+}

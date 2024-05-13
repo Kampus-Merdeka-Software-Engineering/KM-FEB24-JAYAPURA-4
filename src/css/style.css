@@ -6,13 +6,19 @@
     
 }
 
+html{
+    overflow-x: hidden;
+}
+
 li{
     list-style: none;
 }
+
 body{
     display: flex;    /* flex box */
     min-height: 100vh;    /* view for height => supaya tinggiya memenuhi screen dari layarnya */
     background-color: #f3f4f7;
+    overflow-x: hidden;
 }
 
 #side-bar{
@@ -287,7 +293,7 @@ li .list-item .description {
 #content .main_content .card-score {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     justify-items: center;
     grid-gap: 30px;
 }
