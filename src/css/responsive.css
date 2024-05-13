@@ -43,7 +43,8 @@
         grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
         justify-items: center;
         grid-template-areas: 
-            "c1 c2" "c3 c4";
+            "c1 c2" 
+            "c3 c4";
         gap: 25px;
         margin-bottom: 25px;
     }
@@ -109,8 +110,8 @@
     }
 
     .chart-grid{
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-template-rows: none;
         justify-items: center;
         grid-template-areas: 
         "c1" 

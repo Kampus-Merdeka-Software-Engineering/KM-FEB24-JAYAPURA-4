@@ -355,6 +355,8 @@ li .list-item .description {
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
+    min-height: 100px;
+    min-width: 100px;
 }
 
 .c:nth-child(1){
