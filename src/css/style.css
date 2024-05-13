@@ -214,11 +214,20 @@ li .list-item .description {
     cursor: pointer;
 }
 
+#content .head-main .team4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #3375F4;
+}
+
 #content .head-main .profile{
-    width: 46px;
-	height: 46px;
+    width: 40px;
+	height: 40px;
 	object-fit: cover;
-	border-radius: 50%;
 }
 
 #content .main_content{
