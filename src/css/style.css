@@ -38,6 +38,7 @@ body{
 
 #side-bar.hide {
     width: 80px;
+    padding-left: 10px;
     transition: all ease-out .3s;
 }
 
@@ -72,7 +73,11 @@ body{
 }
 
 #side-bar.hide .nav-sidebar{
+    width: 100%;
     margin-top: 30px;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-color: #000000; */
 }
 
 
@@ -90,6 +95,7 @@ body{
     gap: 20px;
     padding: 10px;
 } 
+
 
 #side-bar h5{
     color: #ffffff;
@@ -135,7 +141,7 @@ li .list-item .description {
 
 
 #side-bar section a:hover{
-    background: #2262d8;
+    background: #0f357b;
     transition: all ease-in .2s;
     border-radius: 15px;
     padding: 10px;
@@ -230,7 +236,7 @@ li .list-item .description {
 }
 
 .main_content .dash-head h3{
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 500;
     color: #0f357b;
 }
