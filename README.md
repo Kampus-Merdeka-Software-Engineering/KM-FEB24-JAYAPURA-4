@@ -10,10 +10,10 @@ Section Jayapura - Team 4 created by GitHub Classroom
 | Naufal Nurrohmat            | Front End Engineer  |
 | Qalbi Karunia               | Front End Engineer  |
 | Alyatisa                    | Front End Engineer  |
-| Reyhan Fahrezi Maulana      | Deployment Team     |
 | Lydia Yuliantika            | Pitch Deck Team     |
 | Hilary Gita Wangi           | Pitch Deck Team     |
 | Ifah Fatmawati              | Pitch Deck Team     |
 | Hailar Kharisma             | Quality Assurance   |
 | Muhammad Alid Rizky Ma`aly  | Quality Assurance   |
 | Anisa Rahmawati             | Quality Assurance   |
+| Reyhan Fahrezi Maulana      | Deployment Team     |
