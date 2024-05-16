@@ -14,6 +14,6 @@ Section Jayapura - Team 4 created by GitHub Classroom
 | Hilary Gita Wangi           | Pitch Deck Team     |
 | Ifah Fatmawati              | Pitch Deck Team     |
 | Hailar Kharisma             | Quality Assurance   |
-| Muhammad Alid Rizky Ma`aly  | Quality Assurance   |
 | Anisa Rahmawati             | Quality Assurance   |
+| Muhammad Alid Rizky Ma`aly  | Quality Assurance   |
 | Reyhan Fahrezi Maulana      | Deployment Team     |
