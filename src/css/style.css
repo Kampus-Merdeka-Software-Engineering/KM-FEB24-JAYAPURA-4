@@ -1,13 +1,11 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
 *{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     
-}
-
-html{
-    overflow-x: hidden;
 }
 
 li{
@@ -25,15 +23,14 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2000;
+    z-index: 1;
     background-color: #3375F4 ;
-    width: 260px;
+    width: 80px;
     height: 100%;
     padding: 30px 20px;
     display: flex; 
     flex-direction: column;
-    gap: 50px;
-    transition: all ease-in .3s;
+    transition: all ease-out .5s;
     overflow-x: hidden;
     
 }
@@ -42,86 +39,99 @@ body{
 	display: none;
 }
 
-#side-bar.hide {
-    width: 80px;
-    padding-left: 10px;
-    transition: all ease-out .3s;
+#side-bar.active {
+    width: 260px;
+    gap: 40px;
+    overflow-x: hidden;
 }
 
 #side-bar .sidebar-header{
     display: flex;
+    width: 100%;
     gap: 20px;
     padding: 0;
-}
-
-#side-bar.hide .sidebar-header{
-    display: none;
 }
 
 #side-bar .icon{
     width: 70px;
-    height: 70px;
+    height: 88px;
     background-color: var(--background-color3);
+    transition: .3s;
+    opacity: 0;
+}
+
+#side-bar.active .icon{
+    opacity: 1;
+    transition-delay: .2s;
 }
 
 #side-bar .sidebar-header h4{
-    font-size: 20px;
+    font-size: 17px;
     color: #ffffff;
     font-weight: 600;
+    transition: .3s;
+    opacity: 0;
 }
+
+#side-bar.active .sidebar-header h4{
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+
+#side-bar .sidebar-header .toogle-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 27px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#side-bar.active .sidebar-header .toogle-btn{
+    left: 90%
+}
+
 
 .nav-sidebar{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     padding: 0;
-    box-sizing: border-box;
-    gap: 65px;
-}
-
-#side-bar.hide .nav-sidebar{
-    width: 100%;
-    margin-top: 30px;
-    align-items: center;
-    /* justify-content: center; */
-    /* background-color: #000000; */
-}
-
-
-.nav-sidebar section{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.list-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    box-sizing: border-box;
-    gap: 20px;
-    padding: 10px;
-} 
-
-
-#side-bar h5{
-    color: #ffffff;
-}
-
-#side-bar.hide h5{
-    display: none;
 }
 
 .nav-sidebar ul{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 35px;
     margin-left: 5px;
     color: #ffffff;
     list-style: none;
     
 }
 
+.list-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+} 
+
+#side-bar h5{
+    color: #ffffff;
+    display: none;
+}
+
+#side-bar.active h5{
+    display: block;
+}
+
 li .list-item .icon2{
+    display: flex;
+    justify-content: center;
     width: 30px;
     height: 30px;
     background-color: var(--background-color3);
@@ -134,11 +144,15 @@ li .list-item .description {
     color: #ffffff;
     cursor: pointer;
     font-weight: 100;
+    display: none;
+    transition: opacity .3s;
 
 }
 
-#side-bar.hide li .list-item .description {
-    display: none;
+#side-bar.active li .list-item .description {
+    pointer-events: auto;
+    display: block;
+    transition-delay: calc(.1s * var(--i));
 }
 
 #side-bar .nav-sidebar li a{
@@ -146,7 +160,7 @@ li .list-item .description {
 }
 
 
-#side-bar section a:hover{
+#side-bar ul li a:hover{
     background: #0f357b;
     transition: all ease-in .2s;
     border-radius: 15px;
@@ -155,15 +169,9 @@ li .list-item .description {
 
 #content{
     position: relative;
-    width: calc(100% - 260px);
-    left: 260px;
-    transition: all ease-in .3s;
-}
-
-#side-bar.hide ~ #content {
     width: calc(100% - 80px);
     left: 80px;
-    transition: all ease-out .3s;
+    transition: all ease-in .3s;
 }
 
 #content .head-main{
@@ -172,10 +180,15 @@ li .list-item .description {
     grid-gap: 40px;
     color: #3375F4;
     padding: 20px;
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    left: 0;
-    z-index: 1000;
+    left: 0; */
+}
+
+#side-bar.active ~ #content {
+    width: calc(100% - 260px);
+    left: 260px;
+    transition: all ease-out .3s;
 }
 
 #content .head-main .bx.bx-menu{
@@ -408,7 +421,7 @@ li .list-item .description {
     text-decoration: none;
     padding: 10px;
     background-color: #ffffff;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 .socialIcn a i{

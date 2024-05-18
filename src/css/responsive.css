@@ -1,7 +1,7 @@
 @media screen and (max-width: 768px) {
 
-    #side-bar{
-        width: 210px;
+    #side-bar.active {
+        width: 230px;
     }
 
     #side-bar .icon{
@@ -14,11 +14,6 @@
         font-size: 15px;
         color: #ffffff;
         font-weight: 500;
-    }
-
-    #content{
-        width: calc(100% - 80px);
-        left: 210px;
     }
 
     .main_content .dash-head h3{
@@ -61,6 +56,11 @@
 }
 
 @media screen and (max-width: 576px) {
+
+    #side-bar.active {
+        width: 100%;
+    }
+
 
     #content .head-main form .searchbar input{
         display: none;
