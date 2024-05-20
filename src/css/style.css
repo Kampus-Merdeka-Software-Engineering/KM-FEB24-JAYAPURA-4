@@ -8,14 +8,26 @@
     
 }
 
+:root {
+    --primary-color: #f3f4f7
+}
+
+.dark-theme{
+    --primary-color: #000206
+}
+
 li{
     list-style: none;
+}
+
+html{
+    overflow-x: hidden;
 }
 
 body{
     display: flex;    /* flex box */
     min-height: 100vh;    /* view for height => supaya tinggiya memenuhi screen dari layarnya */
-    background-color: #f3f4f7;
+    background-color: var(--primary-color);
     overflow-x: hidden;
 }
 
@@ -31,7 +43,7 @@ body{
     display: flex; 
     flex-direction: column;
     transition: all ease-out .5s;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     
 }
 
@@ -41,7 +53,7 @@ body{
 
 #side-bar.active {
     width: 260px;
-    padding: 10px 20px;
+    padding: 18px 20px;
     gap: 20px;
     overflow-x: hidden;
 }
@@ -49,13 +61,13 @@ body{
 #side-bar .sidebar-header{
     display: flex;
     width: 100%;
-    gap: 10px;
+    gap: 15px;
     padding: 0;
 }
 
 #side-bar .icon{
     width: 50px;
-    height: 69px;
+    height: 60px;
     background-color: var(--background-color3);
     transition: .3s;
     opacity: 0;
@@ -68,12 +80,12 @@ body{
 
 #side-bar .sidebar-header h4{
     font-size: 12px;
-    height: 70px;
+    height: 61px;
     display: flex;
     align-items: center;
     color: #ffffff;
     font-weight: 600;
-    transition: .3s;
+    transition: .5s;
     opacity: 0;
 }
 
@@ -88,15 +100,14 @@ body{
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    width: 40px;
-    height: 65px;
-    font-size: 27px;
-    padding-left: 9px;
+    width: 45px;
+    height: 50px;
+    font-size: 25px;
+    padding-left: 10px;
     color: #fff;
     text-align: center;
     cursor: pointer;
     transition: .5s;
-    /* background-color: #c0c0c0; */
 }
 
 #side-bar.active .sidebar-header .toogle-btn{
@@ -159,6 +170,42 @@ li .list-item .description {
 
 }
 
+/* li .list-item i{
+    color: #ffffff;
+}
+
+li .list-item a .bx .bxs-chevron-down {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+
+li .sub-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-weight: 400;
+    background-color: #0f357b;
+    display: none;
+}
+
+li .sub-menu a {
+    font-weight: 300;
+    font-size: 13px;
+    padding-left: 50px;
+    color: #ffffff;
+}
+
+li .sub-menu a:hover {
+    transition: all ease-in .2s;
+    text-align: center;
+    border-radius: 15px;
+    white-space: nowrap;
+} */
+
 #side-bar.active li .list-item .description {
     pointer-events: auto;
     display: block;
@@ -184,21 +231,22 @@ li .list-item .description {
     transition: all ease-in .3s;
 }
 
+#side-bar.active ~ #content {
+    width: calc(100% - 260px);
+    left: 260px;
+    transition: all ease-in-out .5s;
+}
+
+
 #content .head-main{
     display: flex;
     align-items: center;
-    grid-gap: 40px;
+    grid-gap: 30px;
     color: #3375F4;
     padding: 20px;
     /* position: sticky;
     top: 0;
     left: 0; */
-}
-
-#side-bar.active ~ #content {
-    width: calc(100% - 260px);
-    left: 260px;
-    transition: all ease-out .3s;
 }
 
 #content .head-main .bx.bx-menu{
@@ -243,16 +291,22 @@ li .list-item .description {
     cursor: pointer;
 }
 
+#content .head-main #icn {
+    width: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
 #content .head-main .logoo{
     display: flex;
     align-items: center;
     gap: 6px;
-    padding-top: 0;
 }
 
 #content .head-main .logoo .font{
     width: 70px;
-    font-size: 14px;
+    font-size: 13px;
     justify-content: center;
     font-weight: 300;
 }
@@ -265,8 +319,8 @@ li .list-item .description {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 45px;
     border-radius: 50%;
     background-color: #3375F4;
 }
@@ -294,7 +348,7 @@ li .list-item .description {
 .main_content .dash-head h3{
     font-size: 23px;
     font-weight: 500;
-    color: #0f357b;
+    color: #3375F4;
 }
 
 .filt{
@@ -342,8 +396,9 @@ li .list-item .description {
 #content .main_content .card-score .box-scorecard{
     display: flex;
     align-items: center;
+    width: 210px;
     padding: 24px;
-    border-radius: 15px;
+    border-radius: 20px;
     background: #ffffff;
     gap: 30px;
 }
@@ -364,7 +419,7 @@ li .list-item .description {
 
 .value label{
     font-size: 11px;
-    font-weight: 100;
+    font-weight: 300;
     color: #000000;
 }
 
@@ -433,6 +488,7 @@ li .list-item .description {
 .cite{
     grid-area: f1;
     align-content: end;
+    color: #3375F4;
 }
 
 .media{
