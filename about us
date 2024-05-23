@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 4 - Jayapura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #87CEEB;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo img {
+            height: 50px;
+        }
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+        section#about {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        section#about h1 {
+            margin-bottom: 20px;
+        }
+        section#about p {
+            margin-bottom: 40px;
+        }
+        section#about h2 {
+            color: red;
+            margin-bottom: 40px;
+        }
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .team-member {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .team-member:hover {
+            transform: scale(1.1);
+        }
+        .team-member img {
+            width: 100%;
+            height: auto;
+        }
+        .team-member p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="IMG_6495.jpg" alt="Jayapura IV Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h1>About Us</h1>
+        <p>A team called Team 4-Jayapura which consists of 13 people from 4 different divisions (Project Leader, Front End Engineer, Deployment Team, Pitch Deck Team, and Quality Assurance).</p>
+        <h2>Meet the people behind Team 4 - Jayapura.</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="ghozi.jpg" alt="Ghozi Abdullah">
+                <p>Ghozi Abdullah</p>
+                <p>Project Leader</p>
+            </div>
+            <div class="team-member">
+                <img src="kirana.jpg" alt="Intania Syahla Kirana">
+                <p>Intania Syahla Kirana</p>
+                <p>Front End Engineer</p>
+            </div>
+            <div class="team-member">
+                <img src="qalbi.jpg" alt="Qalbi Karunia">
+                <p>Qalbi Karunia</p>
+                <p>Front End Engineer</p>
+            </div>
+            <div class="team-member">
+                <img src="dimas.jpg" alt="Dimas Agustia Samsudin">
+                <p>Dimas Agustia Samsudin</p>
+                <p>Front End Engineer</p>
+            </div>
+            <div class="team-member">
+                <img src="naufal.jpg" alt="Naufal Nurrohmat">
+                <p>Naufal Nurrohmat</p>
+                <p>Front End Engineer</p>
+            </div>
+            <div class="team-member">
+                <img src="alya.jpg" alt="Alyatisa">
+                <p>Alyatisa</p>
+                <p>Front End Engineer</p>
+            </div>
+            <div class="team-member">
+                <img src="rayhan.jpg" alt="Reyhan Fahrezi Maulana">
+                <p>Reyhan Fahrezi Maulana</p>
+                <p>Deployment Team</p>
+            </div>
+            <div class="team-member">
+                <img src="ifah.jpg" alt="Ifah Fatmawati">
+                <p>Ifah Fatmawati</p>
+                <p>Pitch Deck Team</p>
+            </div>
+            <div class="team-member">
+                <img src="hilary.jpg" alt="Hilary Gita Wangi">
+                <p>Hilary Gita Wangi</p>
+                <p>Pitch Deck Team</p>
+            </div>
+            <div class="team-member">
+                <img src="lydia.jpg" alt="Lydia Yuliantika">
+                <p>Lydia Yuliantika</p>
+                <p>Pitch Deck Team</p>
+            </div>
+            <div class="team-member">
+                <img src="anisa.jpg" alt="Anisa Rahmawati">
+                <p>Anisa Rahmawati</p>
+                <p>Quality Assurance</p>
+            </div>
+            <div class="team-member">
+                <img src="alid.jpg" alt="Muhammad Alid Rizky Ma'aly">
+                <p>Muhammad Alid Rizky Ma'aly</p>
+                <p>Quality Assurance</p>
+            </div>
+            <div class="team-member">
+                <img src="ghozi.jpg" alt="Hailar Kharisma">
+                <p>Hailar Kharisma</p>
+                <p>Quality Assurance</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
