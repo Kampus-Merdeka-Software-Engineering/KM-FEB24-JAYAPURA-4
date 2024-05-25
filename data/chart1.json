@@ -1,0 +1,97 @@
+[{
+    "Bulan": "January",
+    "Category": "Food",
+    "Total_Penjualan": "50"
+  }, {
+    "Bulan": "January",
+    "Category": "Water",
+    "Total_Penjualan": "32"
+  }, {
+    "Bulan": "January",
+    "Category": "Carbonated",
+    "Total_Penjualan": "23"
+  }, {
+    "Bulan": "January",
+    "Category": "Non Carbonated",
+    "Total_Penjualan": "22"
+  }, {
+    "Bulan": "February",
+    "Category": "Food",
+    "Total_Penjualan": "57"
+  }, {
+    "Bulan": "February",
+    "Category": "Carbonated",
+    "Total_Penjualan": "31"
+  }, {
+    "Bulan": "February",
+    "Category": "Water",
+    "Total_Penjualan": "30"
+  }, {
+    "Bulan": "February",
+    "Category": "Non Carbonated",
+    "Total_Penjualan": "25"
+  }, {
+    "Bulan": "March",
+    "Category": "Food",
+    "Total_Penjualan": "74"
+  }, {
+    "Bulan": "March",
+    "Category": "Water",
+    "Total_Penjualan": "40"
+  }, {
+    "Bulan": "March",
+    "Category": "Carbonated",
+    "Total_Penjualan": "18"
+  }, {
+    "Bulan": "March",
+    "Category": "Non Carbonated",
+    "Total_Penjualan": "13"
+  }, {
+    "Bulan": "April",
+    "Category": "Food",
+    "Total_Penjualan": "57"
+  }, {
+    "Bulan": "April",
+    "Category": "Water",
+    "Total_Penjualan": "36"
+  }, {
+    "Bulan": "April",
+    "Category": "Carbonated",
+    "Total_Penjualan": "25"
+  }, {
+    "Bulan": "April",
+    "Category": "Non Carbonated",
+    "Total_Penjualan": "9"
+  }, {
+    "Bulan": "May",
+    "Category": "Food",
+    "Total_Penjualan": "71"
+  }, {
+    "Bulan": "May",
+    "Category": "Carbonated",
+    "Total_Penjualan": "47"
+  }, {
+    "Bulan": "May",
+    "Category": "Water",
+    "Total_Penjualan": "43"
+  }, {
+    "Bulan": "May",
+    "Category": "Non Carbonated",
+    "Total_Penjualan": "20"
+  }, {
+    "Bulan": "June",
+    "Category": "Food",
+    "Total_Penjualan": "112"
+  }, {
+    "Bulan": "June",
+    "Category": "Water",
+    "Total_Penjualan": "42"
+  }, {
+    "Bulan": "June",
+    "Category": "Carbonated",
+    "Total_Penjualan": "38"
+  }, {
+    "Bulan": "June",
+    "Category": "Non Carbonated",
+    "Total_Penjualan": "32"
+  }]
