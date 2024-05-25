@@ -1,5 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
+/* style all */
 *{
     font-family: 'Poppins', sans-serif;
     padding: 0;
@@ -30,7 +31,9 @@ body{
     background-color: var(--primary-color);
     overflow-x: hidden;
 }
+/* style all */
 
+/* Side Bar */
 #side-bar{
     position: fixed;
     top: 0;
@@ -43,8 +46,6 @@ body{
     display: flex; 
     flex-direction: column;
     transition: all ease-out .5s;
-    /* overflow-x: hidden; */
-    
 }
 
 #side-bar::-webkit-scrollbar {
@@ -170,42 +171,6 @@ li .list-item .description {
 
 }
 
-/* li .list-item i{
-    color: #ffffff;
-}
-
-li .list-item a .bx .bxs-chevron-down {
-    position: absolute;
-    right: 0;
-    margin: 20px;
-    transition: 0.3s ease;
-}
-
-li .sub-menu{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 25px;
-    cursor: pointer;
-    font-weight: 400;
-    background-color: #0f357b;
-    display: none;
-}
-
-li .sub-menu a {
-    font-weight: 300;
-    font-size: 13px;
-    padding-left: 50px;
-    color: #ffffff;
-}
-
-li .sub-menu a:hover {
-    transition: all ease-in .2s;
-    text-align: center;
-    border-radius: 15px;
-    white-space: nowrap;
-} */
-
 #side-bar.active li .list-item .description {
     pointer-events: auto;
     display: block;
@@ -223,7 +188,9 @@ li .sub-menu a:hover {
     border-radius: 15px;
     padding: 10px;
 }
+/* Side Bar */
 
+/* Content */
 #content{
     position: relative;
     width: calc(100% - 80px);
@@ -336,13 +303,13 @@ li .sub-menu a:hover {
     flex-direction: column;
     width: 100%;
     padding: 45px;
-    gap: 65px;
+    gap: 45px;
 }
 
 .main_content .dash-head{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .main_content .dash-head h3{
@@ -396,7 +363,7 @@ li .sub-menu a:hover {
 #content .main_content .card-score .box-scorecard{
     display: flex;
     align-items: center;
-    width: 210px;
+    width: 230px;
     padding: 24px;
     border-radius: 20px;
     background: #ffffff;
@@ -419,8 +386,8 @@ li .sub-menu a:hover {
 
 .value label{
     font-size: 11px;
-    font-weight: 300;
-    color: #000000;
+    font-weight: bold;
+    color: #0f357b;
 }
 
 .value span{
@@ -436,23 +403,36 @@ li .sub-menu a:hover {
 
 .chart-grid{
     width: 90%;
-    height: 90vb;
+    /* height: 560px; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
         "c1 c1 c2 c2"
         "c3 c3 c3 c4";
-    text-align: center;
     gap: 35px;
+    max-height: 100%;
+    width: 100%;
 }
 
 .c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
     min-height: 100px;
     min-width: 100px;
+    gap: 7px;
+}
+
+.c label {
+    color: #0f357b;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .c:nth-child(1){
@@ -472,10 +452,105 @@ li .sub-menu a:hover {
     grid-area: c4;
 }
 
-.c label{
-    color: #0f357b;
-    font-weight: 500;
+.c .chart_wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+.c #chartbar {
+    width: 100%;
+    height: 90vb;
+}
+
+.c #piechart {
+    width: 100%;
+    height: 90vb;
+}
+
+.title-menu{
+    text-align: center;
+}
+
+.title-menu h3 {
+    font-size: 23px;
+    font-weight: 500;
+    color: #3375F4;
+}
+
+.main_content .analytics-box {
+    display: block;
+    width: fit-content;
+    padding: 24px;
+    border-radius: 20px;
+    background: #ffffff;
+    margin: 20px 0;
+    flex-basis: 100%;
+}
+
+.main_content .analytics-box .analytics1 {
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.main_content .analytics-box .problem {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: fit-content;
+}
+
+table th {
+    width:25%;
+}
+
+.cr {
+    margin: auto;
+    /* display: flex; */
+    padding: 10px;
+}
+
+.C-R {
+    border-radius: 10px;
+    margin: 20px;
+    width: 100%;
+}
+
+.conc-recom {
+    padding: 34px;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: #4c8cf2;
+    gap: 30px;
+}
+
+.conc-recom ol {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.conc-recom li {
+    list-style: inherit;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.C-R .judul-cr {
+    text-align: center;
+}
+
 
 .footer{
     width: 100%;

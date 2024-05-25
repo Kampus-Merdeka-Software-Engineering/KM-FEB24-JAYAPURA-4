@@ -1,3 +1,12 @@
+@media screen and (max-width: 1040px){
+    .c label {
+        color: #0f357b;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     #side-bar.active {
@@ -32,10 +41,7 @@
     .cite{
         font-size: 13px;
     }
-    
-    .socialIcn{
-       font-size: 13px;
-    }
+
 
     #content .main_content .card-score .box-scorecard{
         width: 100%;
@@ -43,7 +49,7 @@
 
     .chart-grid{
         width: 90%;
-        height: 100vb;
+        /* height: 100vb; */
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         grid-template-rows: none;
         grid-template-areas: 
@@ -57,14 +63,22 @@
 
     .c{
         width: 100%;
-        height: 100%;
+        /* height: 210px; */
     }
 
     .c label {
-        font-size: 13px;
+        font-size: 11px;
     }
 
-}
+    .c .chart-wrapper {
+        padding: 3px 0;
+    }
+
+    .socialIcn{
+        font-size: 13px;
+     }
+
+} 
 
 @media screen and (max-width: 576px) {
 
@@ -118,8 +132,8 @@
 
     .chart-grid{
         width: 100%;
-        height: 100vb;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        height: auto;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         grid-template-rows: none;
         justify-items: center;
         grid-template-areas: 
@@ -133,11 +147,11 @@
 
     .c{
         width: 100%;
-        height: 100%;
+        /* height: 100%; */
     }
 
     .c label {
-        font-size: 15px;
+        font-size: 10px;
     }
 
     .cite{
