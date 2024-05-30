@@ -12,13 +12,19 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
     <!-- vending style -->
 
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="src/css/main.css">
 
     <!-- favicon -->
     <link rel="icon" href="src/img/2-removebg-preview_2-removebg-preview.png">
+
+    
 
 
 </head>
@@ -85,28 +91,6 @@
 
         <header class="head-main">
 
-            <section class="form">
-
-                <form action="">
-
-                    <div class="searchbar">
-
-                        <input type="text" placeholder="Search...." name="search">
-
-                        <button class="searchbtn" type="submit">
-                            <i class='bx bx-search'></i>
-                        </button>
-
-                    </div>
-
-                </form>
-
-            </section>
-
-            <section>
-                <img src="src/img/moon.png" id="icn">
-            </section>
-
             <section class="logoo">
 
                 <section class="team4">
@@ -120,6 +104,10 @@
                     <label>Team IV</label> <label class="jayapura">Jayapura</label>
                 </section>
 
+            </section>
+
+            <section>
+                <img src="src/img/moon.png" id="icn">
             </section>
 
         </header>
@@ -190,24 +178,38 @@
 
                     <article class="c">
                         <label for="chart1">Top Category Per Month</label>
-                        <canvas id="chartbar"></canvas>
+                        <div class="chart_wrapper">
+                            <canvas id="chartbar"></canvas>
+                        </div>
                     </article>
 
                     <article class="c">
                         <label for="chart2">Top 10 Most Sold Product</label>
-                        <canvas id="chartproduct"></canvas>
+                        <div class="chart_wrapper">
+                            <canvas id="chartproduct"></canvas>
+                        </div>
                     </article>
 
                     <article class="c">
                         <label for="chart3">Average Price Per Product</label>
                         <!-- <canvas id="chart3"></canvas> -->
+                        <table id="tabelchart" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>rprice</th>
+                                    <th>Month</th>
+                                    <th>Total Sales</th>
+                                </tr>
+                            </thead>
+                        </table>
                     </article>
 
                     <article class="c">
                         <label for="chart4">Average Transaction Value Per Payment Method</label>
                         <!-- <canvas id="chart4"></canvas> -->
                         <div class="chart_wrapper">
-                            <canvas id="piechart"></canvas>
+                        <canvas id="piechart"></canvas>
                         </div>
                     </article>
 
@@ -242,11 +244,11 @@
                     <h4>Project Background</h4>
                     <div class="container">
                         <div class="card">
-                            <img src="" alt="Chart 1">
+                            <!-- <img src="" alt="Chart 1"> --><canvas id="chartbartotal"></canvas>
                             <p>Increasing average revenue peaks in Juni</p>
                         </div>
                         <div class="card">
-                            <img src="" alt="Chart 2">
+                            <!-- <img src="" alt="Chart 2"> --> <canvas id="chartlinetotal"></canvas>
                             <p>Increasing revenue shows an uptren</p>
                         </div>
                     </div>
@@ -316,6 +318,123 @@
                 <h3 id="about_us">
                     About Us
                 </h3>
+                <BR>
+                <div class="wrapper">
+                    <!-- untuk home -->
+                    <section id="home">
+                        <div class="kolom">
+                            <h2>Our Story of Team 4</h2>
+                            <p>
+                                Welcome to Group 4 Section Jayapura Independent Study PT. Educational Dream Revolution.
+                                Find out our story in building a capstone project where we are a business data analytics
+                                group for a Vending Machine company.
+                            </p>
+                        </div>
+                        <img src="https://c0.wallpaperflare.com/preview/389/615/630/business-businessman-communication-concept.jpg"
+                            alt="Teamwork Quotes" />
+                    </section>
+
+                    <section class="about" id="courses">
+                        <img src="https://media.istockphoto.com/id/1947696317/id/video/diskusi-bisnis-animasi-2d-dari-rekan-kerja-pria-dan-wanita.jpg?s=640x640&k=20&c=PB73XmmHJB5S4ptrpdfqCT28FarL9dX4ILAOlOupXOk="
+                            alt="Teamwork Quotes" />
+                        <div class="kolom">
+                            <h2>About Team 4</h2>
+                            <p>
+                                We are Team 4 data analytics Section Jayapura PT. Educational Cita Revolution dedicated
+                                to exploring the meaning of every data point. With a rigorous approach and sophisticated
+                                algorithms, we turn raw data into valuable insights for your business. We believe that
+                                hidden within every dataset is great potential, and we are committed to helping you
+                                unlock it for greater success.
+                            </p>
+                        </div>
+                    </section>
+                    <!-- <div class="card">
+                      <div class="card-body"> -->
+                    <section class="garis">
+                        <div class="timeline">
+                            <!-- Your timeline content goes here -->
+                            <div class="container">
+                                <div class="timeline">
+                                    <div class="timeline-event">
+                                        <div class="timeline-content">
+                                            <h3>Business understanding</h3>
+                                            <p class="date">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i> March 6 2024 - March
+                                                21 2024
+                                            </p>
+                                            <p>
+                                                determine what statement is for the capstone project, starting from the
+                                                background, establishing the problem statement, documenting the reasons
+                                                behind forming the problem statement, determining the main cause, matrix
+                                                and hypothesis. So from the results of the work a business statement was
+                                                produced from the capstone project which determined how to increase
+                                                sales at Guttenplans from 37.9 to 42% within 6 years, and a background
+                                                and analysis of the main causes of the things analyzed from the capstone
+                                                project was produced.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-event">
+                                        <div class="timeline-content">
+                                            <h3>Data Cleaning</h3>
+                                            <p class="date">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i> 26 Maret 2024 - 4
+                                                April 2024
+                                            </p>
+                                            <p>
+                                                Cleaning data in Spreadsheets to tidy up and perfect the data that will
+                                                be carried out by analysts. So data is produced that is ready to be used
+                                                after passing the results of checking duplicate data, missing value data
+                                                in each column by checking for outliers based on category and average
+                                                Rprice based on standard deviation and IQR.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-event">
+                                        <div class="timeline-content">
+                                            <h3>Data Analyst</h3>
+                                            <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> April
+                                                4-April 17 2024</p>
+                                            <p>
+                                                Data Analysts are tasked with interpreting data to support business
+                                                decisions by analyzing patterns and trends from various sources, by
+                                                searching for various kinds of data needed in the data analyst decision
+                                                making process which is carried out from queries that are displayed to
+                                                strengthen the arguments that are being searched for and analyzed.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-event">
+                                        <div class="timeline-content">
+                                            <h3>Data Visualization</h3>
+                                            <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> April 17,
+                                                2024 – April 19, 2024</p>
+                                            <p>
+                                                Creating and designing a display from data that has been analyzed to
+                                                present and facilitate communication between stakeholders. Data
+                                                visualization provides very useful information for business purposes,
+                                                where decision makers in the company can easily see and understand the
+                                                results of the company's work, based on the variables they have.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-event">
+                                        <div class="timeline-content">
+                                            <h3>Data Communication </h3>
+                                            <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 19 April
+                                                2024</p>
+                                            <p>
+                                                Create and select data that is poured into a slideshow to display all
+                                                the results of data analysis obtained in the decision-making process in
+                                                a form that is easy to understand and understood by relevant
+                                                stakeholders or partners as material to strengthen arguments for
+                                                business process decision-making.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                </div>
 
             </section>
             <!--About US-->
@@ -354,7 +473,10 @@
     <!-- Script Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="src/js/index.js"></script>
+     <!-- jQuery -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- DataTables JS -->
+     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
 </body>
-
 </html>

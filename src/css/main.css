@@ -1,0 +1,207 @@
+/* dimas */
+/* home */
+
+a.tbl-pink:hover {
+  background: #3f72af;
+  text-decoration: none;
+}
+
+section.about {
+  margin: auto;
+  display: flex;
+  margin-bottom: 50px;
+  background-color: #f8f9fa; /* Warna latar belakang */
+  padding: 20px; /* Ruang padding di dalam section */
+  border-radius: 10px; /* Sudut bulatan untuk section */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan section */
+}
+
+.about img {
+  width: 500px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+section.about .kolom {
+  flex: 1; /* Mengisi ruang yang tersedia di sebelah kanan gambar */
+}
+.wrapper section {
+  margin: auto;
+  display: flex;
+  margin-bottom: 50px;
+  background-color: #f8f9fa; /* Warna latar belakang */
+  padding: 20px; /* Ruang padding di dalam section */
+  border-radius: 10px; /* Sudut bulatan untuk section */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan section */
+}
+
+.wrapper img {
+  width: 500px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.wrapper section .kolom {
+  flex: 1; /* Mengisi ruang yang tersedia di sebelah kanan gambar */
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Memberi jarak antara setiap event timeline */
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px 0;
+}
+
+section.garis .timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #000000;
+  top: 0; /* Sesuaikan dengan posisi mulai garis */
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-event {
+  position: relative;
+  margin: 20px 0;
+}
+
+.timeline-content {
+  background-color: #3375f4;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  width: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.timeline-content .date {
+  color: #d0e6c0;
+  margin-bottom: 10px;
+}
+
+.timeline-event:nth-child(even) .timeline-content {
+  left: 50%;
+  transform: translateX(10%);
+}
+
+.timeline-event:nth-child(odd) .timeline-content {
+  left: 50%;
+  transform: translateX(-110%);
+}
+
+.timeline-event:nth-child(even) .timeline-content::after, .timeline-event:nth-child(odd) .timeline-content::after {
+  content: "";
+  position: absolute;
+  width: 17px; /* Diameter of the dot */
+  height: 17px; /* Diameter of the dot */
+  background-color: #000;
+  border-radius: 50%; /* Makes the dot circular */
+  top: 50%;
+  transform: translateY(-50%);
+}
+.timeline-event:nth-child(even) .timeline-content::after {
+  left: -22px; /* Position the dot to the left of the card */
+}
+
+.timeline-event:nth-child(odd) .timeline-content::after {
+  right: -22px; /* Position the dot to the right of the card */
+}
+
+.timeline-event:hover .timeline-content {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.timeline-event:hover .timeline-content h3 {
+  color: #555;
+}
+
+.timeline-event:hover .timeline-content .date {
+  color: #777;
+}
+
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline-event:nth-child(odd) .timeline-content::before {
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #8ba47a transparent transparent;
+  left: -10px;
+  top: 20px;
+}
+
+.timeline-event:nth-child(even) .timeline-content::before {
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #8ba47a;
+  right: -10px;
+  top: 20px;
+}
+
+/* Tampilan Tambahan */
+.timeline-event:hover .timeline-content {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.timeline-event:hover .timeline-content h3 {
+  color: #555;
+}
+
+.timeline-event:hover .timeline-content .date {
+  color: #777;
+}
+
+@media screen and (max-width: 1040px){
+  .wrapper img {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .wrapper img {
+    width: 180px;
+  }
+
+  .wrapper p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .wrapper img {
+    width: 75px;
+  }
+
+  .wrapper p {
+    font-size: 5px;
+  }
+
+  .wrapper h2{
+    font-size: 9px;
+  }
+
+  .wrapper h3{
+    font-size: 9px;
+  }
+
+}
