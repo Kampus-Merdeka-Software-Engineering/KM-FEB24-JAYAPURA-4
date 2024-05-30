@@ -17,3 +17,6 @@ Section Jayapura - Team 4 created by GitHub Classroom
 | Anisa Rahmawati             | Quality Assurance   |
 | Muhammad Alid Rizky Ma`aly  | Quality Assurance   |
 | Reyhan Fahrezi Maulana      | Deployment Team     |
+
+Link Github pages : https://jayapura-4.github.io/km-feb24-jayapura-4/
+Link Vercel : https://km-feb24-jayapura-4.vercel.app/
