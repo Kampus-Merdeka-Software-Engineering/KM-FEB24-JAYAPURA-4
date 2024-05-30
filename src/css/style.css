@@ -393,7 +393,7 @@ li .list-item .description {
 
 .c label {
     color: #0f357b;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
 }
@@ -422,37 +422,71 @@ li .list-item .description {
     justify-content: center;
 }
 
-.c #chartbar {
+.c canvas {
     width: 100%;
-    height: 100%;
+    max-height: 90vb;
 }
 
-.c #piechart {
+/* .c #piechart {
     width: 100%;
     height: 90vb;
 }
 
-.c #chartbar {
+.c #chartproduct {
     width: 100%;
-    height: 100vb;
-}
+    max-height: 90vb;
+} */
+
 /* 
 styling to set table width */
 .dataTables_wrapper{
     width: 95%;
 }
 
-.text_center {
-    text-align: center;
+.dataTables_length label{
+    font-size: 13px;
 }
 
-.title-menu{
+.dataTables_length select{
+    padding: 5px;
+    max-height: 25px;
+    font-size: 13px;
+}
+
+.dataTables_filter label{
+    font-size: 13px;
+}
+
+.dataTables_filter input{
+    padding: 5px;
+    max-height: 25px;
+    font-size: 13px;
+}
+
+.c td {
+    font-size: 13px;
+}
+
+.c th {
+    font-size: 14px;
+    width: 30%;
+}
+
+.paginate_button {
+    font-size: 13px;
+}
+
+.dataTables_info {
+    font-size: 13px;
+}
+
+.text_center {
     text-align: center;
 }
 
 .title-menu h3 {
     font-size: 23px;
-    font-weight: 500;
+    font-weight: 600;
     color: #3375F4;
 }
 
@@ -464,6 +498,14 @@ styling to set table width */
     background: #ffffff;
     margin: 10px 0;
     /* flex-basis: 100%; */
+}
+
+.analytics1 h4{
+    font-size: 20px;
+}
+
+.analytics-box p {
+    font-size: 16px;
 }
 
 .main_content .analytics-box .analytics1 {
@@ -479,15 +521,15 @@ styling to set table width */
     gap: 50px;
 }
 
-#chartlinetotal{
+.card canvas{
     width: 100%;
-    height: 220px
+    height: 320px
 }
 
-#chartbartotal{
+/* #chartbartotal{
     min-width: 100%;
     height: 220px
-}
+} */
 
 .main_content .analytics-box .problem {
     display: flex;
@@ -515,7 +557,7 @@ table th {
 }
 
 .conc-recom {
-    padding: 34px;
+    padding: 0 34px 34px 34px;
     text-align: justify;
     width: 100%;
     height: 100%;
@@ -538,6 +580,7 @@ table th {
 
 .C-R .judul-cr {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 

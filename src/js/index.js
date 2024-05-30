@@ -204,8 +204,8 @@ async function renderChart(data) {
                     responsive: true,
                     fullSize: true,
                     labels: {
-                        boxWidth: window.innerWidth > 768 ? 30 : 20,
-                        boxHeight: window.innerWidth > 768 ? 10 : 5,
+                        boxWidth: window.innerWidth > 768 ? 25 : 20,
+                        boxHeight: window.innerWidth > 768 ? 7 : 5,
                         width: "100%",
                         font: {
                             size: window.innerWidth > 768 ? 10 : 7,
@@ -287,8 +287,8 @@ async function fetchDataAndRenderChart() {
                         fullSize: true,
                         labels: {
                             width: "100%",
-                            boxWidth: window.innerWidth > 768 ? 30 : 20,
-                            boxHeight: window.innerWidth > 768 ? 10 : 5,
+                            boxWidth: window.innerWidth > 768 ? 25 : 20,
+                            boxHeight: window.innerWidth > 768 ? 7 : 5,
                             font: {
                                 weight: 'bold',
                                 size: window.innerWidth > 768 ? 10 : 7
@@ -367,7 +367,7 @@ async function fetchDataAndRenderChartRevenue() {
                             maxRotation:0,
                             font: {
                                 weight: 'bold',
-                                size: window.innerWidth > 768 ? 10 : 7
+                                size: window.innerWidth > 768 ? 9 : 7
                             }
                         },
                         beginAtZero: true
@@ -376,7 +376,7 @@ async function fetchDataAndRenderChartRevenue() {
                         ticks: {
                             font: {
                                 weight: 'bold',
-                                size: window.innerWidth > 768 ? 10 : 7
+                                size: window.innerWidth > 768 ? 9 : 7
                             }
                         }
                     }
@@ -386,8 +386,8 @@ async function fetchDataAndRenderChartRevenue() {
                     legend: {
                         fullSize: true,
                         labels: {
-                            boxWidth: window.innerWidth > 768 ? 30 : 20,
-                            boxHeight: window.innerWidth > 768 ? 10 : 5,
+                            boxWidth: window.innerWidth > 768 ? 25 : 20,
+                            boxHeight: window.innerWidth > 768 ? 7 : 5,
                             width: "100%",
                             font: {
                                 weight: 'bold',
@@ -435,7 +435,7 @@ async function fetchDataAndRenderChartRevenue2() {
                         ticks: {
                             font: {
                                 weight: 'bold',
-                                size: window.innerWidth > 768 ? 10 : 7
+                                size: window.innerWidth > 768 ? 9 : 7
                             }
                         },
                         beginAtZero: true
@@ -444,7 +444,7 @@ async function fetchDataAndRenderChartRevenue2() {
                         ticks: {
                             font: {
                                 weight: 'bold',
-                                size: window.innerWidth > 768 ? 10 : 7
+                                size: window.innerWidth > 768 ? 9 : 7
                             }
                         }
                     }
@@ -454,8 +454,8 @@ async function fetchDataAndRenderChartRevenue2() {
                     legend: {
                         fullSize: true,
                         labels: {
-                            boxWidth: window.innerWidth > 768 ? 30 : 20,
-                            boxHeight: window.innerWidth > 768 ? 10 : 5,
+                            boxWidth: window.innerWidth > 768 ? 25 : 20,
+                            boxHeight: window.innerWidth > 768 ? 7 : 5,
                             width: "100%",
                             font: {
                                 weight: 'bold',

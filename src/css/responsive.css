@@ -10,8 +10,8 @@
         width: 90%;
         /* height: 560px; */
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(100%));
+        grid-template-rows: none;
         grid-template-areas:
             "c1 c1 c2 c2"
             "c3 c3 c4 c4";
@@ -19,6 +19,24 @@
         max-height: 100%;
         width: 100%;
     }
+
+    .dataTables_info {
+        font-size: 10px;
+    }
+
+    .c td {
+        font-size: 10px;
+    }
+
+    .c th {
+        font-size: 15px;
+        width: 30%;
+    }
+
+    .paginate_button {
+        font-size: 13px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -90,13 +108,13 @@
 
     .title-menu h3 {
         font-size: 15px;
-        ;
     }
 
     .container {
         display: flex;
         flex-direction: column;
     }
+    
 
     .analytics-box p {
         font-size: 12px;
@@ -242,7 +260,7 @@
     }
 
     .conc-recom li {
-        font-size: 9px;
+        font-size: 7px;
     }
 
     .socialIcn {
