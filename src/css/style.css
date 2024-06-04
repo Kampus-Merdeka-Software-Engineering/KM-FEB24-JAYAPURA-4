@@ -14,7 +14,7 @@
 }
 
 .dark-theme{
-    --primary-color: #000206
+    --primary-color: #15202B
 }
 
 li{
@@ -277,7 +277,7 @@ li .list-item .description {
 
 .main_content .dash-head h3{
     font-size: 23px;
-    font-weight: 500;
+    font-weight: 600;
     color: #3375F4;
 }
 
@@ -300,7 +300,7 @@ li .list-item .description {
     height: 30px;
     width: 90px;
     border-radius: 9px;
-    text-align: center;
+    /* text-align: center; */
     font-weight: 100;
 
 
@@ -331,6 +331,7 @@ li .list-item .description {
     border-radius: 20px;
     background: #ffffff;
     gap: 30px;
+    box-shadow: 8px 8px #3375F4;
 }
 
 .scorecard{
@@ -365,8 +366,6 @@ li .list-item .description {
 }
 
 .chart-grid{
-    width: 90%;
-    /* height: 560px; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -451,10 +450,12 @@ styling to set table width */
     padding: 5px;
     max-height: 25px;
     font-size: 13px;
+    margin-bottom: 10px;
 }
 
 .dataTables_filter label{
     font-size: 13px;
+    margin-bottom: 10px;
 }
 
 .dataTables_filter input{
@@ -463,11 +464,25 @@ styling to set table width */
     font-size: 13px;
 }
 
-.c td {
-    font-size: 13px;
+.c table {
+    /* border: 1px solid #0f357b; */
+    background-color: #0c337b;
 }
 
+.c td {
+    font-size: 13px;
+    background-color: #3375F4;
+    font-weight: 600;
+    /* color: #ffffff; */
+}
+
+.c .sorting_1{
+    background-color: #0c337b;
+}
+
+
 .c th {
+    color: #ffffff;
     font-size: 14px;
     width: 30%;
 }
@@ -630,4 +645,84 @@ table th {
     color: #ffffff;
     transition: 0.5s;
 }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 30px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: white; /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
 

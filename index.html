@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/responsive.css">
     <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/about-us.css">
 
     <!-- favicon -->
     <link rel="icon" href="src/img/2-removebg-preview_2-removebg-preview.png">
@@ -124,12 +125,12 @@
                 <article class="filt">
 
                     <select name="filter" id="filter">
-                        <option value="filter">Filter</option>
-                        <option value="BSQ-Mall-x1366-ATT">BSQ Mall x1366-ATT</option>
-                        <option value="BSQ-Mall-x1366-Zales">BSQ Mall x1366-Zales</option>
+                        <option value="default">Filter</option>
+                        <option value="BSQ Mall x1366 - ATT">BSQ Mall x1366-ATT</option>
+                        <option value="BSQ Mall x1364 - Zales">BSQ Mall x1366-Zales</option>
                     </select>
 
-                    <button type="button">Clear</button>
+                    <button type="button" id="clear">Clear</button>
 
                 </article>
 
@@ -176,7 +177,7 @@
 
                 <section class="chart-grid">
 
-                    <article class="c">
+                    <article class="c" id="myChart">
                         <label for="chart1">Top Category Per Month</label>
                         <div class="chart_wrapper">
                             <canvas id="chartbar"></canvas>
@@ -197,8 +198,8 @@
                             <thead>
                                 <tr>
                                     <th>Product</th>
-                                    <th>rprice</th>
                                     <th>Month</th>
+                                    <th>Average_Price</th>
                                     <th>Total Sales</th>
                                 </tr>
                             </thead>
@@ -209,11 +210,18 @@
                         <label for="chart4">Average Transaction Value Per Payment Method</label>
                         <!-- <canvas id="chart4"></canvas> -->
                         <div class="chart_wrapper">
-                        <canvas id="piechart"></canvas>
+                            <canvas id="piechart"></canvas>
                         </div>
                     </article>
 
                 </section>
+
+                <!-- Modal ith the chart -->
+                <article id="myModal" class="modal c">
+                    <span class="close">&times;</span>
+                    <label id="caption" for="chart1">Top Category Per Month</label>
+                    <canvas id="chartbarModal" class="modal-content"></canvas>
+                </article>
 
             </section>
 
@@ -436,6 +444,87 @@
                     </section>
                 </div>
 
+                <section id="about">
+                    <h1>About Us</h1>
+                    <p>A team called Team 4-Jayapura which consists of 13 people from 4 different divisions (Project Leader, Front End Engineer, Deployment Team, Pitch Deck Team, and Quality Assurance).</p>
+                    <h2>Meet the people behind Team 4 - Jayapura.</h2>
+                    <div class="team-grid">
+                        <div class="row">
+                            <div class="team-member central-member">
+                                <img src="src/img/About Us/rayhan.jpg" alt="Reyhan F. Maulana">
+                                <p class="name">Reyhan F. Maulana</p>
+                                <p>DA : Project Leader <br> SE : Deployment Team</p>
+                            </div>
+                            <div class="team-member central-member">
+                                <img src="src/img/About Us/ghozi.jpg" alt="Ghozi Abdullah">
+                                <p class="name">Ghozi Abdullah</p>
+                                <p>DA : Data Communication <br> SE : Project Leader</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="team-member">
+                                <img src="src/img/About Us/kirana.jpg" alt="Intania Syahla Kirana">
+                                <p class="name">Intania Syahla Kirana</p>
+                                <p>DA : Data Visualization <br> SE : Front End Engineering</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/qalbi.jpg" alt="Qalbi Karunia">
+                                <p class="name">Qalbi Karunia</p>
+                                <p>DA : Data Cleaning <br> SE : Front End Engineering</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/alya.jpg" alt="Alyatisa">
+                                <p class="name">Alyatisa</p>
+                                <p>DA : Data Communication <br> SE : Front End Engineering</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/naufal.jpg" alt="Naufal Nurrohmat">
+                                <p class="name">Naufal Nurrohmat</p>
+                                <p>DA : Data Cleaning <br> SE : Front End Engineering</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/dimas.jpg" alt="Dimas Agustia Samsudin">
+                                <p class="name">Dimas Agustia Samsudin</p>
+                                <p>DA : Data Analyst <br> SE : Front End Engineering</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="team-member">
+                                <img src="src/img/About Us/lydia.jpg" alt="Lydia Yuliantika">
+                                <p class="name">Lydia Yuliantika</p>
+                                <p>DA : Data Visualization <br> SE : Pitch Deck Team</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/hilary.jpg" alt="Hilary Gita Wangi">
+                                <p class="name">Hilary Gita Wangi</p>
+                                <p>DA : Data Analyst <br> SE : Pitch Deck Team</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/ifah.jpg" alt="Ifah Fatmawati">
+                                <p class="name">Ifah Fatmawati</p>
+                                <p>DA : Data Cleaning <br> SE : Pitch Deck Team</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/alid.jpg" alt="Muhammad Alid Rizky Ma'aly">
+                                <p class="name">Muhammad Alid Rizky Ma'aly</p>
+                                <p>DA : Data Analyst <br> SE : Quality Assurance</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/anisa.jpg" alt="Anisa Rahmawati">
+                                <p class="name">Anisa Rahmawati</p>
+                                <p>DA : Data Visualization <br> SE : Quality Assurance</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/hailar.jpg" alt="Hailar Kharisma">
+                                <p class="name">Hailar Kharisma</p>
+                                <p>DA : Data Communication <br> SE : Quality Assurance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="logo-bottom">
+                        <img src="src/img/About Us/IMG_6495.jpg" alt="Jayapura IV Logo">
+                    </div> -->
+                </section>
             </section>
             <!--About US-->
 
