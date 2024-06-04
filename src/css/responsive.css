@@ -1,10 +1,57 @@
-@media screen and (max-width: 1040px){
+@media screen and (max-width: 1040px) {
     .c label {
         color: #0f357b;
         font-size: 12px;
         font-weight: bold;
         text-align: center;
     }
+
+    .chart-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100%));
+        grid-template-rows: none;
+        grid-template-areas:
+            "c1 c1 c2 c2"
+            "c3 c3 c4 c4";
+        max-height: 100%;
+        width: 100%;
+    }
+
+    .dataTables_info {
+        font-size: 10px;
+    }
+
+    .dataTables_length label{
+        font-size: 11px;
+    }
+    
+    .dataTables_length select{
+        max-height: 22px;
+        font-size: 10px;
+    }
+    
+    .dataTables_filter label{
+        font-size: 11px;
+    }
+    
+    .dataTables_filter input{
+        max-height: 20px;
+        font-size: 11px;
+    }
+
+    .c td {
+        font-size: 10px;
+    }
+
+    .c th {
+        font-size: 11px;
+        width: 30%;
+    }
+
+    .paginate_button {
+        font-size: 10px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -13,13 +60,13 @@
         width: 230px;
     }
 
-    #side-bar .icon{
+    #side-bar .icon {
         width: 60px;
         height: 70px;
         background-color: var(--background-color3);
     }
-    
-    #side-bar .sidebar-header h4{
+
+    #side-bar .sidebar-header h4 {
         font-size: 12px;
         width: 200px;
         color: #ffffff;
@@ -34,51 +81,86 @@
         font-size: 13px;
     }
 
-    .main_content .dash-head h3{
-        font-size: 14px;
+    .main_content .dash-head h3 {
+        font-size: 15px;
     }
 
-    .cite{
+    .cite {
         font-size: 13px;
     }
 
 
-    #content .main_content .card-score .box-scorecard{
+    #content .main_content .card-score .box-scorecard {
         width: 100%;
     }
 
-    .chart-grid{
+    .chart-grid {
         width: 90%;
         /* height: 100vb; */
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         grid-template-rows: none;
-        grid-template-areas: 
-        "c1" 
-        "c2" 
-        "c3" 
-        "c4";
+        grid-template-areas:
+            "c1"
+            "c2"
+            "c3"
+            "c4";
         gap: 25px;
         margin-bottom: 15px;
     }
 
-    .c{
+    .c {
         width: 100%;
         /* height: 210px; */
     }
 
     .c label {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .c .chart-wrapper {
         padding: 3px 0;
     }
 
-    .socialIcn{
-        font-size: 13px;
-     }
+    .title-menu h3 {
+        font-size: 15px;
+    }
 
-} 
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    .analytics-box p {
+        font-size: 12px;
+    }
+
+    .dataTables_info {
+        font-size: 10px;
+    }
+
+    td {
+        font-size: 10px;
+    }
+
+    th {
+        font-size: 15px;
+        width: 30%;
+    }
+
+    .paginate_button {
+        font-size: 12px;
+    }
+
+    .conc-recom li {
+        font-size: 15px;
+    }
+
+    .socialIcn {
+        font-size: 13px;
+    }
+
+}
 
 @media screen and (max-width: 576px) {
 
@@ -87,17 +169,17 @@
     }
 
 
-    #content .head-main form .searchbar input{
+    #content .head-main form .searchbar input {
         display: none;
     }
 
-    #content .head-main form .searchbar .searchbtn{
+    #content .head-main form .searchbar .searchbtn {
         width: auto;
         height: auto;
         background: transparent;
         border-radius: none;
     }
-    
+
     #content .head-main form.show .searchbar input {
         display: block;
         width: 100%;
@@ -110,43 +192,42 @@
         background-color: red;
     }
 
-      #content .head-main form .searchbar .searchbtn{
+    #content .head-main form .searchbar .searchbtn {
         color: #3375F4;
     }
 
-    #content .head-main form.show ~ .profile{
+    #content .head-main form.show~.profile {
         display: none;
     }
 
-    #content .main_content .dash-head{
+    #content .main_content .dash-head {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         gap: 15px;
     }
 
-    #content .main_content .card-score .box-scorecard{
-        width:100%;
+    #content .main_content .card-score .box-scorecard {
+        width: 100%;
         height: 100px;
     }
 
-    .chart-grid{
+    .chart-grid {
         width: 100%;
         height: auto;
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
         grid-template-rows: none;
         justify-items: center;
-        grid-template-areas: 
-        "c1" 
-        "c2" 
-        "c3" 
-        "c4";
+        grid-template-areas:
+            "c1"
+            "c2"
+            "c3"
+            "c4";
         gap: 15px;
         margin-bottom: 0%;
     }
 
-    .c{
+    .c {
         width: 100%;
         /* height: 100%; */
     }
@@ -155,12 +236,50 @@
         font-size: 10px;
     }
 
-    .cite{
+    .cite {
         font-size: 10px;
     }
-    
-    .socialIcn{
-       font-size: 10px;
+
+    #chartlinetotal {
+        height: 120px
     }
-    
+
+    #chartbartotal {
+        height: 120px
+    }
+
+    .title-menu h3 {
+        font-size: 15px;
+        ;
+    }
+
+    .analytics-box h4 {
+        font-size: 9px;
+    }
+
+    .analytics-box p {
+        font-size: 6px;
+    }
+
+    table td {
+        font-size: 6px;
+    }
+
+    table th {
+        font-size: 9px;
+        width: 30%;
+    }
+
+    .C-R h4 {
+        font-size: 12px;
+    }
+
+    .conc-recom li {
+        font-size: 7px;
+    }
+
+    .socialIcn {
+        font-size: 10px;
+    }
+
 }

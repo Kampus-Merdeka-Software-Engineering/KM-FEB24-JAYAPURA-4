@@ -1,31 +1,101 @@
-[{
-  "Product": "Poland Springs Water",
-  "jumlah_terjual": "240"
-}, {
-  "Product": "Monster Energy Original",
-  "jumlah_terjual": "96"
-}, {
-  "Product": "Coca Cola - Zero Sugar",
-  "jumlah_terjual": "77"
-}, {
-  "Product": "SunChips Multigrain - Salsa",
-  "jumlah_terjual": "61"
-}, {
-  "Product": "CheezIt - Original",
-  "jumlah_terjual": "58"
-}, {
-  "Product": "Oreo Mini",
-  "jumlah_terjual": "52"
-}, {
-  "Product": "Takis - Hot Chilli Pepper \u0026 Lime",
-  "jumlah_terjual": "52"
-}, {
-  "Product": "KitKat - Crisp Wafers",
-  "jumlah_terjual": "50"
-}, {
-  "Product": "SunChips Multigrain - Original",
-  "jumlah_terjual": "48"
-}, {
-  "Product": "SunChips Multigrain - Harvest Cheddar",
-  "jumlah_terjual": "48"
-}]
+{"dataset":
+  [{"default":[
+    {
+      "Product": "Poland Springs Water",
+      "jumlah_terjual": "125"
+    }, {
+      "Product": "Monster Energy Original",
+      "jumlah_terjual": "52"
+    }, {
+      "Product": "Takis - Hot Chilli Pepper \u0026 Lime",
+      "jumlah_terjual": "52"
+    }, {
+      "Product": "Coca Cola - Zero Sugar",
+      "jumlah_terjual": "48"
+    }, {
+      "Product": "S. Pellegrino Sparkling Mineral Water",
+      "jumlah_terjual": "42"
+    }, {
+      "Product": "KitKat - Crisp Wafers",
+      "jumlah_terjual": "33"
+    }, {
+      "Product": "SunChips Multigrain - Original",
+      "jumlah_terjual": "29"
+    }, {
+      "Product": "Snapple Diet Tea - Peach Tea",
+      "jumlah_terjual": "27"
+    }, {
+      "Product": "SunChips Multigrain - Salsa",
+      "jumlah_terjual": "26"
+    }, {
+      "Product": "Oreo Mini",
+      "jumlah_terjual": "24"
+    }]
+  },
+  {"BSQ Mall x1366 - ATT":[
+    {
+      "Product": "S. Pellegrino Sparkling Mineral Water",
+      "jumlah_terjual": "42"
+    }, {
+      "Product": "Monster Energy Original",
+      "jumlah_terjual": "34"
+    }, {
+      "Product": "Takis - Hot Chilli Pepper \u0026 Lime",
+      "jumlah_terjual": "30"
+    }, {
+      "Product": "Snapple Diet Tea - Raspberry",
+      "jumlah_terjual": "19"
+    }, {
+      "Product": "KitKat - Crisp Wafers",
+      "jumlah_terjual": "15"
+    }, {
+      "Product": "SunChips Multigrain - Salsa",
+      "jumlah_terjual": "14"
+    }, {
+      "Product": "Red Bull - Original",
+      "jumlah_terjual": "14"
+    }, {
+      "Product": "Oreo Mini",
+      "jumlah_terjual": "13"
+    }, {
+      "Product": "Bai Antioxidant - Molokai Coconut",
+      "jumlah_terjual": "12"
+    }, {
+      "Product": "Poland Springs Water",
+      "jumlah_terjual": "12"
+    }
+  ]},
+  {"BSQ Mall x1364 - Zales":[
+    {
+      "Product": "Poland Springs Water",
+      "jumlah_terjual": "113"
+    }, {
+      "Product": "Coca Cola - Zero Sugar",
+      "jumlah_terjual": "48"
+    }, {
+      "Product": "Snapple Diet Tea - Peach Tea",
+      "jumlah_terjual": "27"
+    }, {
+      "Product": "Takis - Hot Chilli Pepper \u0026 Lime",
+      "jumlah_terjual": "22"
+    }, {
+      "Product": "Takis FUGEO mini",
+      "jumlah_terjual": "22"
+    }, {
+      "Product": "SunChips Multigrain - Original",
+      "jumlah_terjual": "22"
+    }, {
+      "Product": "KitKat - Crisp Wafers",
+      "jumlah_terjual": "18"
+    }, {
+      "Product": "Monster Energy Original",
+      "jumlah_terjual": "18"
+    }, {
+      "Product": "SunChips Multigrain - Salsa",
+      "jumlah_terjual": "12"
+    }, {
+      "Product": "SunChips Multigrain - Harvest Cheddar",
+      "jumlah_terjual": "12"
+    }
+  ]}
+]}

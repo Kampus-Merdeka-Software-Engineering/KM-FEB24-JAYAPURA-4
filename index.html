@@ -12,13 +12,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
     <!-- vending style -->
 
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/about-us.css">
 
     <!-- favicon -->
     <link rel="icon" href="src/img/2-removebg-preview_2-removebg-preview.png">
+
+    
 
 
 </head>
@@ -85,28 +92,6 @@
 
         <header class="head-main">
 
-            <section class="form">
-
-                <form action="">
-
-                    <div class="searchbar">
-
-                        <input type="text" placeholder="Search...." name="search">
-
-                        <button class="searchbtn" type="submit">
-                            <i class='bx bx-search'></i>
-                        </button>
-
-                    </div>
-
-                </form>
-
-            </section>
-
-            <section>
-                <img src="src/img/moon.png" id="icn">
-            </section>
-
             <section class="logoo">
 
                 <section class="team4">
@@ -120,6 +105,10 @@
                     <label>Team IV</label> <label class="jayapura">Jayapura</label>
                 </section>
 
+            </section>
+
+            <section>
+                <img src="src/img/moon.png" id="icn">
             </section>
 
         </header>
@@ -136,12 +125,12 @@
                 <article class="filt">
 
                     <select name="filter" id="filter">
-                        <option value="filter">Filter</option>
-                        <option value="BSQ-Mall-x1366-ATT">BSQ Mall x1366-ATT</option>
-                        <option value="BSQ-Mall-x1366-Zales">BSQ Mall x1366-Zales</option>
+                        <option value="default">Filter</option>
+                        <option value="BSQ Mall x1366 - ATT">BSQ Mall x1366-ATT</option>
+                        <option value="BSQ Mall x1364 - Zales">BSQ Mall x1366-Zales</option>
                     </select>
 
-                    <button type="button">Clear</button>
+                    <button type="button" id="clear">Clear</button>
 
                 </article>
 
@@ -188,19 +177,33 @@
 
                 <section class="chart-grid">
 
-                    <article class="c">
+                    <article class="c" id="myChart">
                         <label for="chart1">Top Category Per Month</label>
-                        <canvas id="chartbar"></canvas>
+                        <div class="chart_wrapper">
+                            <canvas id="chartbar"></canvas>
+                        </div>
                     </article>
 
                     <article class="c">
                         <label for="chart2">Top 10 Most Sold Product</label>
-                        <canvas id="chartproduct"></canvas>
+                        <div class="chart_wrapper">
+                            <canvas id="chartproduct"></canvas>
+                        </div>
                     </article>
 
                     <article class="c">
                         <label for="chart3">Average Price Per Product</label>
                         <!-- <canvas id="chart3"></canvas> -->
+                        <table id="tabelchart" class="display" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Month</th>
+                                    <th>Average_Price</th>
+                                    <th>Total Sales</th>
+                                </tr>
+                            </thead>
+                        </table>
                     </article>
 
                     <article class="c">
@@ -212,6 +215,13 @@
                     </article>
 
                 </section>
+
+                <!-- Modal ith the chart -->
+                <article id="myModal" class="modal c">
+                    <span class="close">&times;</span>
+                    <label id="caption" for="chart1">Top Category Per Month</label>
+                    <canvas id="chartbarModal" class="modal-content"></canvas>
+                </article>
 
             </section>
 
@@ -242,11 +252,11 @@
                     <h4>Project Background</h4>
                     <div class="container">
                         <div class="card">
-                            <img src="" alt="Chart 1">
+                            <canvas id="chartbartotal"></canvas>
                             <p>Increasing average revenue peaks in Juni</p>
                         </div>
                         <div class="card">
-                            <img src="" alt="Chart 2">
+                            <canvas id="chartlinetotal"></canvas>
                             <p>Increasing revenue shows an uptren</p>
                         </div>
                     </div>
@@ -274,8 +284,8 @@
 
             <section class="cr">
                 <article class="C-R">
-                    <h4 class="judul-cr">Conclusion</h4>
                     <div class="conc-recom">
+                        <h4 class="judul-cr">Conclusion</h4>
                         <ol>
                             <li>Adding variety without considering customer preferences can increase the risk of low
                                 demand and stock wastage.</li>
@@ -294,8 +304,8 @@
                 </article>
 
                 <article class="C-R">
-                    <h4 class="judul-cr">Recommendation</h4>
                     <div class="conc-recom">
+                        <h4 class="judul-cr">Recommendation</h4>
                         <ol>
                             <li>Conduct further market research to understand more specific consumer preferences and
                                 trends.</li>
@@ -316,7 +326,205 @@
                 <h3 id="about_us">
                     About Us
                 </h3>
+                <BR>
+                <div class="wrapper">
+                    <!-- untuk home -->
+                    <section id="home">
+                        <div class="kolom">
+                            <h2>Our Story of Team 4</h2>
+                            <p>
+                                Welcome to Group 4 Section Jayapura Independent Study PT. Educational Dream Revolution.
+                                Find out our story in building a capstone project where we are a business data analytics
+                                group for a Vending Machine company.
+                            </p>
+                        </div>
+                        <img src="https://c0.wallpaperflare.com/preview/389/615/630/business-businessman-communication-concept.jpg"
+                            alt="Teamwork Quotes" />
+                    </section>
 
+                    <section class="about" id="courses">
+                        <img src="https://media.istockphoto.com/id/1947696317/id/video/diskusi-bisnis-animasi-2d-dari-rekan-kerja-pria-dan-wanita.jpg?s=640x640&k=20&c=PB73XmmHJB5S4ptrpdfqCT28FarL9dX4ILAOlOupXOk="
+                            alt="Teamwork Quotes" />
+                        <div class="kolom">
+                            <h2>About Team 4</h2>
+                            <p>
+                                We are Team 4 data analytics Section Jayapura PT. Educational Cita Revolution dedicated
+                                to exploring the meaning of every data point. With a rigorous approach and sophisticated
+                                algorithms, we turn raw data into valuable insights for your business. We believe that
+                                hidden within every dataset is great potential, and we are committed to helping you
+                                unlock it for greater success.
+                            </p>
+                        </div>
+                    </section>
+                    <!-- <div class="card">
+                      <div class="card-body"> -->
+                    <section class="garis">
+                        <div class="timeline">
+                            <!-- Your timeline content goes here -->
+                            <div class="container">
+                                <div class="timeline">
+                                    <div class="timeline-event">
+                                        <div class="timeline-content">
+                                            <h3>Business understanding</h3>
+                                            <p class="date">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i> March 6 2024 - March
+                                                21 2024
+                                            </p>
+                                            <p>
+                                                determine what statement is for the capstone project, starting from the
+                                                background, establishing the problem statement, documenting the reasons
+                                                behind forming the problem statement, determining the main cause, matrix
+                                                and hypothesis. So from the results of the work a business statement was
+                                                produced from the capstone project which determined how to increase
+                                                sales at Guttenplans from 37.9 to 42% within 6 years, and a background
+                                                and analysis of the main causes of the things analyzed from the capstone
+                                                project was produced.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-event">
+                                        <div class="timeline-content">
+                                            <h3>Data Cleaning</h3>
+                                            <p class="date">
+                                                <i class="fa fa-calendar" aria-hidden="true"></i> 26 Maret 2024 - 4
+                                                April 2024
+                                            </p>
+                                            <p>
+                                                Cleaning data in Spreadsheets to tidy up and perfect the data that will
+                                                be carried out by analysts. So data is produced that is ready to be used
+                                                after passing the results of checking duplicate data, missing value data
+                                                in each column by checking for outliers based on category and average
+                                                Rprice based on standard deviation and IQR.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-event">
+                                        <div class="timeline-content">
+                                            <h3>Data Analyst</h3>
+                                            <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> April
+                                                4-April 17 2024</p>
+                                            <p>
+                                                Data Analysts are tasked with interpreting data to support business
+                                                decisions by analyzing patterns and trends from various sources, by
+                                                searching for various kinds of data needed in the data analyst decision
+                                                making process which is carried out from queries that are displayed to
+                                                strengthen the arguments that are being searched for and analyzed.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-event">
+                                        <div class="timeline-content">
+                                            <h3>Data Visualization</h3>
+                                            <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> April 17,
+                                                2024 – April 19, 2024</p>
+                                            <p>
+                                                Creating and designing a display from data that has been analyzed to
+                                                present and facilitate communication between stakeholders. Data
+                                                visualization provides very useful information for business purposes,
+                                                where decision makers in the company can easily see and understand the
+                                                results of the company's work, based on the variables they have.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-event">
+                                        <div class="timeline-content">
+                                            <h3>Data Communication </h3>
+                                            <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 19 April
+                                                2024</p>
+                                            <p>
+                                                Create and select data that is poured into a slideshow to display all
+                                                the results of data analysis obtained in the decision-making process in
+                                                a form that is easy to understand and understood by relevant
+                                                stakeholders or partners as material to strengthen arguments for
+                                                business process decision-making.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                </div>
+
+                <section id="about">
+                    <h1>About Us</h1>
+                    <p>A team called Team 4-Jayapura which consists of 13 people from 4 different divisions (Project Leader, Front End Engineer, Deployment Team, Pitch Deck Team, and Quality Assurance).</p>
+                    <h2>Meet the people behind Team 4 - Jayapura.</h2>
+                    <div class="team-grid">
+                        <div class="row">
+                            <div class="team-member central-member">
+                                <img src="src/img/About Us/rayhan.jpg" alt="Reyhan F. Maulana">
+                                <p class="name">Reyhan F. Maulana</p>
+                                <p>DA : Project Leader <br> SE : Deployment Team</p>
+                            </div>
+                            <div class="team-member central-member">
+                                <img src="src/img/About Us/ghozi.jpg" alt="Ghozi Abdullah">
+                                <p class="name">Ghozi Abdullah</p>
+                                <p>DA : Data Communication <br> SE : Project Leader</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="team-member">
+                                <img src="src/img/About Us/kirana.jpg" alt="Intania Syahla Kirana">
+                                <p class="name">Intania Syahla Kirana</p>
+                                <p>DA : Data Visualization <br> SE : Front End Engineering</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/qalbi.jpg" alt="Qalbi Karunia">
+                                <p class="name">Qalbi Karunia</p>
+                                <p>DA : Data Cleaning <br> SE : Front End Engineering</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/alya.jpg" alt="Alyatisa">
+                                <p class="name">Alyatisa</p>
+                                <p>DA : Data Communication <br> SE : Front End Engineering</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/naufal.jpg" alt="Naufal Nurrohmat">
+                                <p class="name">Naufal Nurrohmat</p>
+                                <p>DA : Data Cleaning <br> SE : Front End Engineering</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/dimas.jpg" alt="Dimas Agustia Samsudin">
+                                <p class="name">Dimas Agustia Samsudin</p>
+                                <p>DA : Data Analyst <br> SE : Front End Engineering</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="team-member">
+                                <img src="src/img/About Us/lydia.jpg" alt="Lydia Yuliantika">
+                                <p class="name">Lydia Yuliantika</p>
+                                <p>DA : Data Visualization <br> SE : Pitch Deck Team</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/hilary.jpg" alt="Hilary Gita Wangi">
+                                <p class="name">Hilary Gita Wangi</p>
+                                <p>DA : Data Analyst <br> SE : Pitch Deck Team</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/ifah.jpg" alt="Ifah Fatmawati">
+                                <p class="name">Ifah Fatmawati</p>
+                                <p>DA : Data Cleaning <br> SE : Pitch Deck Team</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/alid.jpg" alt="Muhammad Alid Rizky Ma'aly">
+                                <p class="name">Muhammad Alid Rizky Ma'aly</p>
+                                <p>DA : Data Analyst <br> SE : Quality Assurance</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/anisa.jpg" alt="Anisa Rahmawati">
+                                <p class="name">Anisa Rahmawati</p>
+                                <p>DA : Data Visualization <br> SE : Quality Assurance</p>
+                            </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/hailar.jpg" alt="Hailar Kharisma">
+                                <p class="name">Hailar Kharisma</p>
+                                <p>DA : Data Communication <br> SE : Quality Assurance</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="logo-bottom">
+                        <img src="src/img/About Us/IMG_6495.jpg" alt="Jayapura IV Logo">
+                    </div> -->
+                </section>
             </section>
             <!--About US-->
 
@@ -354,7 +562,10 @@
     <!-- Script Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="src/js/index.js"></script>
+     <!-- jQuery -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- DataTables JS -->
+     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
 </body>
-
 </html>
