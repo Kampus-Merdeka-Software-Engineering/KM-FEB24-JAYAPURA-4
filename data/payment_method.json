@@ -1,7 +1,29 @@
-[{
-    "Type": "Cash",
-    "rata_type": "1.8376565295169942"
-  }, {
-    "Type": "Credit",
-    "rata_type": "2.1395027624309395"
-  }]
+{"dataset":[
+  {"default":[
+    {
+      "Type": "Cash",
+      "rata_type": "1.8376565295169942"
+    }, {
+      "Type": "Credit",
+      "rata_type": "2.1395027624309395"
+    }
+  ]},
+  {"BSQ Mall x1366 - ATT":[
+    {
+      "Type": "Cash",
+      "rata_type": "1.993927125506072"
+    }, {
+      "Type": "Credit",
+      "rata_type": "2.2944785276073612"
+    }
+  ]},
+  {"BSQ Mall x1364 - Zales":[
+    {
+      "Type": "Cash",
+      "rata_type": "1.7139423076923075"
+    }, {
+      "Type": "Credit",
+      "rata_type": "2.0125628140703524"
+    }
+  ]}
+]}
