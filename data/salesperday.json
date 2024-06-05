@@ -1,0 +1,17 @@
+{"dataset" :[
+    {"default":[
+        {
+            "penjualan_perhari": "10"
+        }
+    ]},
+    {"BSQ Mall x1366 - ATT":[
+        {
+            "penjualan_perhari": "5"
+        }
+    ]},
+    {"BSQ Mall x1364 - Zales":[
+        {
+            "penjualan_perhari": "5"
+        }
+    ]}
+]}

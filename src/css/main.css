@@ -73,6 +73,14 @@ section.garis .timeline::after {
   margin: 20px 0;
 }
 
+.kolom h2 {
+  margin-bottom: 5px;
+}
+
+.transparan {
+  opacity: 0.8;
+}
+
 .timeline-content {
   background-color: #3375f4;
   padding: 20px;

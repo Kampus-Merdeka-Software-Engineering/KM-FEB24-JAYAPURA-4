@@ -1,19 +1,28 @@
+#about {
+    display: block;
+    max-width: 1005;
+    padding: 24px;
+    border-radius: 20px;
+    background: #ffffff;
+    flex-basis: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+} 
+
 section#about {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-section#about h1 {
-    margin-bottom: 20px;
-}
-
-section#about p {
-    margin-bottom: 40px;
+    padding: 3em 1em;
 }
 
 section#about h2 {
     color: red;
-    margin-bottom: 40px;
+    margin-bottom: 0.5em;
+    font-weight: 2000;
+    text-align: center;
+}
+
+.desc_about {
+    margin-bottom: 0.8em;
+    text-align: center;
 }
 
 .team-grid {
@@ -24,19 +33,19 @@ section#about h2 {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
+    gap: 1em;
+    margin-bottom: 1em;
+    max-width: 100%;
 }
 
 .team-member {
     position: relative;
     border: 1px solid #ddd;
     padding: 10px;
-    width: 150px;
-    text-align: center;
+    max-width: 150px;
     cursor: pointer;
-    background-color: #f0f8ff;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -46,25 +55,28 @@ section#about h2 {
 }
 
 .team-member img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
-.team-member p {
-    margin: 5px 0;
+.team-member h5 {
+    height: 45px;
+    margin-bottom: auto;
+    font-size: 13px;
+    text-align: center;
 }
 
-.team-member p.name {
-    border: 1px solid #000;
-    padding: 5px;
-    font-size: 0.9em;
+.team-member .job {
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
 }
 
-.central-member {
+/*.central-member {
     width: 200px;
     padding: 20px;
     margin-bottom: 40px;
-}
+}*/
 
 .logo-bottom {
     margin-top: 40px;
@@ -72,4 +84,58 @@ section#about h2 {
 
 .logo-bottom img {
     width: 150px;
+}
+
+@media (max-width: 768px) {
+    #about {
+        padding: 1em;
+    }
+    section#about {
+        padding: 2em 1em; /* reduce padding on smaller screens */
+    }
+    section#about h2 {
+        font-size: 1.5em; /* reduce font size on smaller screens */
+    }
+    .team-member {
+        max-width: 100px; /* reduce width on smaller screens */
+    }
+    .team-member h5 {
+        font-size: 10px; /* reduce font size on smaller screens */
+    }
+
+    .team-member .job {
+        font-size: 8px;
+    }
+    /* .row {
+        gap: 0.5em;
+    } */
+}
+
+@media (max-width: 480px) {
+    #about {
+        padding: 0.5em;
+    }
+    section#about {
+        padding: 1em; /* further reduce padding on very small screens */
+    }
+    section#about h2 {
+        font-size: 15px; /* further reduce font size on very small screens */
+    }
+    .desc_about {
+        font-size: 13px;
+    }
+    .team-member {
+        max-width: 70px; /* further reduce width on very small screens */
+        padding: 5px;
+    }
+    .team-member h5 {
+        font-size: 5px; /* further reduce font size on very small screens */
+        height: 25px;
+    }
+    .team-member .job {
+        font-size: 3px;
+    }
+    .row {
+        gap: 0.2em; /* further reduce gap on very small screens */
+    }
 }

@@ -89,6 +89,11 @@
         font-size: 13px;
     }
 
+    #side-bar.active ~ #content {
+        width: calc(100% - 230px);
+        left: 230px;
+    }
+
 
     #content .main_content .card-score .box-scorecard {
         width: 100%;
@@ -121,6 +126,14 @@
         padding: 3px 0;
     }
 
+    .c th{
+        font-size: 8px;
+    }
+
+    .c td{
+        font-size: 8px;
+    }
+
     .title-menu h3 {
         font-size: 15px;
     }
@@ -133,6 +146,10 @@
 
     .analytics-box p {
         font-size: 12px;
+    }
+
+    .dataTables_wrapper .dataTables_filter {
+        margin-top: 0px;
     }
 
     .dataTables_info {
@@ -156,6 +173,10 @@
         font-size: 15px;
     }
 
+    .conc-recom2 li {
+        font-size: 15px;
+    }
+
     .socialIcn {
         font-size: 13px;
     }
@@ -168,6 +189,31 @@
         width: 100%;
     }
 
+    #side-bar{
+        width: 55px;
+        padding: 15px 9px;
+        display: flex; 
+        flex-direction: column;
+    }
+
+    #side-bar .sidebar-header .toogle-btn {
+        font-size: 22px;
+    }
+
+    li .list-item .icon2{
+        width: 20px;
+        height: 20px;
+    }
+
+    #content{
+        width: calc(100% - 55px);
+        left: 55px;
+    }
+
+    #side-bar.active ~ #content {
+        width: calc(100% - 55px);
+        left: 100%;
+    }
 
     #content .head-main form .searchbar input {
         display: none;
@@ -203,13 +249,21 @@
     #content .main_content .dash-head {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
         gap: 15px;
     }
 
     #content .main_content .card-score .box-scorecard {
-        width: 100%;
-        height: 100px;
+        width: 90%;
+        height: 70px;
+    }
+
+    .value span{
+        font-size: 15px;
+    }
+
+    .value label{
+        font-size: 9px;
     }
 
     .chart-grid {
@@ -236,16 +290,20 @@
         font-size: 10px;
     }
 
+    .c table{
+        margin-top: 5px;
+    }
+
     .cite {
         font-size: 10px;
     }
 
-    #chartlinetotal {
-        height: 120px
+    .dataTables_info {
+        font-size: 7px;
     }
 
-    #chartbartotal {
-        height: 120px
+    .paginate_button {
+        font-size: 7px;
     }
 
     .title-menu h3 {
@@ -274,7 +332,15 @@
         font-size: 12px;
     }
 
+    .C-R .judul-cr {
+        font-size: 13px;
+    }
+
     .conc-recom li {
+        font-size: 7px;
+    }
+
+    .conc-recom2 li {
         font-size: 7px;
     }
 

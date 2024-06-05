@@ -1,14 +1,14 @@
 [
   {
-    "TransMonth": "Januari",
+    "TransMonth": "January",
     "TotalLineTotal": "883.5"
   },
   {
-    "TransMonth": "Februari",
+    "TransMonth": "February",
     "TotalLineTotal": "908.75"
   },
   {
-    "TransMonth": "Maret",
+    "TransMonth": "March",
     "TotalLineTotal": "1129.0"
   },
   {
@@ -16,11 +16,11 @@
     "TotalLineTotal": "1622.5"
   },
   {
-    "TransMonth": "Mei",
+    "TransMonth": "May",
     "TotalLineTotal": "1655.5"
   },
   {
-    "TransMonth": "Juni",
+    "TransMonth": "June",
     "TotalLineTotal": "2024.75"
   }
 ]

@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="stylesheet" href="src/css/about-us.css">
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- favicon -->
     <link rel="icon" href="src/img/2-removebg-preview_2-removebg-preview.png">
 
@@ -143,7 +146,7 @@
                     <img src="src/img/card1.svg" alt="scoreicon" class="scorecard">
 
                     <div class="value">
-                        <span id="sales-per-day">0</span>
+                        <span id="sales-per-day"></span>
                         <label for="sales-per-day"> Sales Per Day</label>
                     </div>
 
@@ -154,7 +157,7 @@
                     <img src="src/img/card3.svg" alt="scoreicon" class="scorecard">
 
                     <div class="value">
-                        <span id="sales-per-day">0</span>
+                        <span id="total-product-sold"></span>
                         <label for="sales-per-day">Total Product Sold</label>
                     </div>
 
@@ -165,7 +168,7 @@
                     <img src="src/img/card2.svg" alt="scoreicon3" class="scorecard">
 
                     <div class="value">
-                        <span id="total-product-sold">0</span>
+                        <span id="total-revanue"></span>
                         <label for="sales-per-day">Total Revenue</label>
                     </div>
 
@@ -292,45 +295,40 @@
                 </h3>
 
             </section>
-            <!--<section class="dash-head-box">-->
 
-            <section class="cr">
-                <article class="C-R">
-                    <div class="conc-recom">
-                        <h4 class="judul-cr">Conclusion</h4>
+                <section class="C-R">
+                    <article class="conc-recom">
+                        <h3 class="judul-cr">Conclusion</h3>
                         <ol>
-                            <li>Adding variety without considering customer preferences can increase the risk of low
-                                demand and stock wastage.</li>
-                            <li>Poland spring water occupies the first position in the most popular products because
-                                consumers are looking for healthier beverages with a natural filtered spring water
-                                source.</li>
-                            <li>Affordable pricing is much sought after by consumers because it allows consumers with
-                                various income levels and financial priorities to access the products they need or want.
-                            </li>
-                            <li>The availability of various payment methods in vending machines attracts consumers who
-                                prefer to use credit due to user-friendliness and the ease and speed of transactions.
-                                Credit payment methods account for 54% of the total, which is a larger share compared to
-                                cash payments, which reach 46%.</li>
+                           <li>Adding variety without considering customer preferences can increase the risk of low
+                                   demand and stock wastage.</li>
+                           <li>Poland spring water occupies the first position in the most popular products because
+                                   consumers are looking for healthier beverages with a natural filtered spring water
+                                   source.</li>
+                           <li>Affordable pricing is much sought after by consumers because it allows consumers with
+                                   various income levels and financial priorities to access the products they need or want.
+                           </li>
+                           <li>The availability of various payment methods in vending machines attracts consumers who
+                                   prefer to use credit due to user-friendliness and the ease and speed of transactions.
+                                   Credit payment methods account for 54% of the total, which is a larger share compared to
+                                   cash payments, which reach 46%.</li>
                         </ol>
-                    </div>
-                </article>
-
-                <article class="C-R">
-                    <div class="conc-recom">
-                        <h4 class="judul-cr">Recommendation</h4>
-                        <ol>
-                            <li>Conduct further market research to understand more specific consumer preferences and
-                                trends.</li>
-                            <li>Offer sales strategies such as discounts for popular products during certain periods.
-                            </li>
-                            <li>Place affordably priced products in easily accessible positions to optimize inventory,
-                                which should always be available in sufficient quantities.</li>
-                            <li>Introduce credit payment methods to reach different types of consumers and diversify
-                                through QR codes, mobile banking, virtual accounts, and e-wallets.</li>
-                        </ol>
-                    </div>
-                </article>
-            </section>
+                    </article>
+   
+                   <article class="conc-recom2">
+                       <h3 class="judul-cr">Recommendation</h3>
+                       <ol>
+                           <li>Conduct further market research to understand more specific consumer preferences and
+                                   trends.</li>
+                           <li>Offer sales strategies such as discounts for popular products during certain periods.
+                               </li>
+                           <li>Place affordably priced products in easily accessible positions to optimize inventory,
+                                   which should always be available in sufficient quantities.</li>
+                           <li>Introduce credit payment methods to reach different types of consumers and diversify
+                                   through QR codes, mobile banking, virtual accounts, and e-wallets.</li>
+                       </ol>
+                   </article>
+               </section> 
 
             <!--About US-->
             <section class="title-menu">
@@ -345,18 +343,16 @@
                         <div class="kolom">
                             <h2>Our Story of Team 4</h2>
                             <p>
-                                Welcome to Group 4 Section Jayapura Independent Study PT. Educational Dream Revolution.
+                                Welcome to Group 4 Section Jayapura Independent Study PT Revolusi Cita Edukasi.
                                 Find out our story in building a capstone project where we are a business data analytics
                                 group for a Vending Machine company.
                             </p>
                         </div>
-                        <img src="https://c0.wallpaperflare.com/preview/389/615/630/business-businessman-communication-concept.jpg"
-                            alt="Teamwork Quotes" />
+                        <img src="src/img/About Us/foto tim.jpeg" alt="Teamwork Quotes" class="transparan"/>
                     </section>
 
                     <section class="about" id="courses">
-                        <img src="https://media.istockphoto.com/id/1947696317/id/video/diskusi-bisnis-animasi-2d-dari-rekan-kerja-pria-dan-wanita.jpg?s=640x640&k=20&c=PB73XmmHJB5S4ptrpdfqCT28FarL9dX4ILAOlOupXOk="
-                            alt="Teamwork Quotes" />
+                        <img src="src/img/About Us/tim DA2.jpeg" alt="Teamwork Quotes" class="transparan"/>
                         <div class="kolom">
                             <h2>About Team 4</h2>
                             <p>
@@ -383,7 +379,7 @@
                                                 21 2024
                                             </p>
                                             <p>
-                                                determine what statement is for the capstone project, starting from the
+                                                Determine what statement is for the capstone project, starting from the
                                                 background, establishing the problem statement, documenting the reasons
                                                 behind forming the problem statement, determining the main cause, matrix
                                                 and hypothesis. So from the results of the work a business statement was
@@ -457,82 +453,94 @@
                 </div>
 
                 <section id="about">
-                    <h1>About Us</h1>
-                    <p>A team called Team 4-Jayapura which consists of 13 people from 4 different divisions (Project Leader, Front End Engineer, Deployment Team, Pitch Deck Team, and Quality Assurance).</p>
-                    <h2>Meet the people behind Team 4 - Jayapura.</h2>
-                    <div class="team-grid">
-                        <div class="row">
+                    <h2>MEET OUR GREAT TEAM</h2>
+                    <p class="desc_about">A team called Team 4 - Jayapura which consists of 13 people from various different divisions</p>
+                    <article class="team-grid">
+                        <figure class="row">
                             <div class="team-member central-member">
-                                <img src="src/img/About Us/rayhan.jpg" alt="Reyhan F. Maulana">
-                                <p class="name">Reyhan F. Maulana</p>
-                                <p>DA : Project Leader <br> SE : Deployment Team</p>
+                                <img src="src/img/About Us/reyhan.jpeg" alt="Reyhan Fahrezi Maulana">
+                                <h5 class="name">Reyhan Fahrezi M</h5>
+                                <p class="job"> DA : Project Leader </p> 
+                                <p class="job"> SE : Deployment Team</p>
                             </div>
                             <div class="team-member central-member">
-                                <img src="src/img/About Us/ghozi.jpg" alt="Ghozi Abdullah">
-                                <p class="name">Ghozi Abdullah</p>
-                                <p>DA : Data Communication <br> SE : Project Leader</p>
+                                <img src="src/img/About Us/ghozi.jpeg" alt="Ghozi Abdullah">
+                                <h5 class="name">Ghozi Abdullah</h5>
+                                <p class="job"> DA : Data Communication </p>
+                                <p class="job"> SE : Project Leader </p>
                             </div>
-                        </div>
-                        <div class="row">
+                        </figure>
+                        <figure class="row">
                             <div class="team-member">
-                                <img src="src/img/About Us/kirana.jpg" alt="Intania Syahla Kirana">
-                                <p class="name">Intania Syahla Kirana</p>
-                                <p>DA : Data Visualization <br> SE : Front End Engineering</p>
-                            </div>
-                            <div class="team-member">
-                                <img src="src/img/About Us/qalbi.jpg" alt="Qalbi Karunia">
-                                <p class="name">Qalbi Karunia</p>
-                                <p>DA : Data Cleaning <br> SE : Front End Engineering</p>
+                                <img src="src/img/About Us/kirana.jpeg" alt="Intania Syahla Kirana">
+                                <h5 class="name">Intania Syahla Kirana</h5>
+                                <p class="job">Data Visualization &</p> 
+                                <p class="job">Front End Engineering</p>
                             </div>
                             <div class="team-member">
-                                <img src="src/img/About Us/alya.jpg" alt="Alyatisa">
-                                <p class="name">Alyatisa</p>
-                                <p>DA : Data Communication <br> SE : Front End Engineering</p>
+                                <img src="src/img/About Us/qolbi.jpeg" alt="Qalbi Karunia">
+                                <h5 class="name">Qalbi Karunia</h5>
+                                <p class="job">DA : Data Cleaning </p>
+                                <p class="job">SE : Front End Engineering</p>
                             </div>
                             <div class="team-member">
-                                <img src="src/img/About Us/naufal.jpg" alt="Naufal Nurrohmat">
-                                <p class="name">Naufal Nurrohmat</p>
-                                <p>DA : Data Cleaning <br> SE : Front End Engineering</p>
+                                <img src="src/img/About Us/alya.jpeg" alt="Alyatisa">
+                                <h5 class="name">Alyatisa</h5>
+                                <p class="job">DA : Data Communication </p> 
+                                <p class="job">SE : Front End Engineering</p>
                             </div>
                             <div class="team-member">
-                                <img src="src/img/About Us/dimas.jpg" alt="Dimas Agustia Samsudin">
-                                <p class="name">Dimas Agustia Samsudin</p>
-                                <p>DA : Data Analyst <br> SE : Front End Engineering</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="team-member">
-                                <img src="src/img/About Us/lydia.jpg" alt="Lydia Yuliantika">
-                                <p class="name">Lydia Yuliantika</p>
-                                <p>DA : Data Visualization <br> SE : Pitch Deck Team</p>
+                                <img src="src/img/About Us/naufal.jpeg" alt="Naufal Nurrohmat">
+                                <h5 class="name">Naufal Nurrohmat</h5>
+                                <p class="job">DA : Data Cleaning </p> 
+                                <p class="job">SE : Front End Engineering</p>
                             </div>
                             <div class="team-member">
-                                <img src="src/img/About Us/hilary.jpg" alt="Hilary Gita Wangi">
-                                <p class="name">Hilary Gita Wangi</p>
-                                <p>DA : Data Analyst <br> SE : Pitch Deck Team</p>
+                                <img src="src/img/About Us/dimas.jpeg" alt="Dimas Agustia Samsudin">
+                                <h5 class="name">Dimas Agustia Samsudin</h5>
+                                <p class="job">DA : Data Analyst </p> 
+                                <p class="job">SE : Front End Engineering</p>
+                            </div>
+                        </figure>
+                        <figure class="row">
+                            <div class="team-member">
+                                <img src="src/img/About Us/lydia.jpeg" alt="Lydia Yuliantika">
+                                <h5 class="name">Lydia Yuliantika</h5>
+                                <p class="job">DA : Data Visualization </p> 
+                                <p class="job">SE : Pitch Deck Team</p>
                             </div>
                             <div class="team-member">
-                                <img src="src/img/About Us/ifah.jpg" alt="Ifah Fatmawati">
-                                <p class="name">Ifah Fatmawati</p>
-                                <p>DA : Data Cleaning <br> SE : Pitch Deck Team</p>
+                                <img src="src/img/About Us/hilary.jpeg" alt="Hilary Gita Wangi">
+                                <h5 class="name">Hilary Gita Wangi</h5>
+                                <p class="job">DA : Data Analyst </p> 
+                                <p class="job">SE : Pitch Deck Team</p>
                             </div>
                             <div class="team-member">
-                                <img src="src/img/About Us/alid.jpg" alt="Muhammad Alid Rizky Ma'aly">
-                                <p class="name">Muhammad Alid Rizky Ma'aly</p>
-                                <p>DA : Data Analyst <br> SE : Quality Assurance</p>
+                                <img src="src/img/About Us/ifah.jpeg" alt="Ifah Fatmawati">
+                                <h5 class="name">Ifah Fatmawati</h5>
+                                <p class="job">DA : Data Cleaning </p> 
+                                <p class="job">SE : Pitch Deck Team</p>
                             </div>
                             <div class="team-member">
-                                <img src="src/img/About Us/anisa.jpg" alt="Anisa Rahmawati">
-                                <p class="name">Anisa Rahmawati</p>
-                                <p>DA : Data Visualization <br> SE : Quality Assurance</p>
+                                <img src="src/img/About Us/alid.jpeg" alt="Muhammad Alid Rizky Ma'aly">
+                                <h5 class="name">Muhammad Alid R M</h5>
+                                <p class="job">DA : Data Analyst </p> 
+                                <p class="job">SE : Quality Assurance</p>
                             </div>
                             <div class="team-member">
-                                <img src="src/img/About Us/hailar.jpg" alt="Hailar Kharisma">
-                                <p class="name">Hailar Kharisma</p>
-                                <p>DA : Data Communication <br> SE : Quality Assurance</p>
+                                <img src="src/img/About Us/anisa.jpeg" alt="Anisa Rahmawati">
+                                <h5 class="name">Anisa Rahmawati</h5>
+                                <p class="job">DA : Data Visualization </p> 
+                                <p class="job">SE : Quality Assurance</p>
                             </div>
-                        </div>
-                    </div>
+                            <div class="team-member">
+                                <img src="src/img/About Us/hailar.jpeg" alt="Hailar Kharisma">
+                                <h5 class="name">Hailar Kharisma</h5>
+                                <p class="job">DA : Data Communication </p>
+                                <p class="job">SE : Quality Assurance</p>
+                            </div>
+                        </figure>
+                    </article>
                     <!-- <div class="logo-bottom">
                         <img src="src/img/About Us/IMG_6495.jpg" alt="Jayapura IV Logo">
                     </div> -->
@@ -557,8 +565,8 @@
 
                 <section class="socialIcn">
 
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/team4jayapura?igsh=NXY1dmZkb3c0M2Qz" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/Kampus-Merdeka-Software-Engineering/km-feb24-jayapura-4" target="_blank"><i class="fa-brands fa-github"></i></a>
                     <a href=""><i class='bx bxl-gmail'></i></a>
 
                 </section>
@@ -574,10 +582,13 @@
     <!-- Script Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="src/js/index.js"></script>
-     <!-- jQuery -->
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <!-- DataTables JS -->
-     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="src/js/darkmode.js"></script>
+    <script src="src/js/dashboard.js"></script>
+    <script src="src/js/projectBackground.js"></script>
+    <script src="src/js/scorecard.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 
 </body>
 </html>
