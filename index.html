@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- head -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -184,7 +184,7 @@
                         </div>
                     </article>
 
-                    <article class="c">
+                    <article class="c" id="myChart">
                         <label for="chart2">Top 10 Most Sold Product</label>
                         <div class="chart_wrapper">
                             <canvas id="chartproduct"></canvas>
@@ -206,7 +206,7 @@
                         </table>
                     </article>
 
-                    <article class="c">
+                    <article class="c" id="myChart">
                         <label for="chart4">Average Transaction Value Per Payment Method</label>
                         <!-- <canvas id="chart4"></canvas> -->
                         <div class="chart_wrapper">
@@ -221,6 +221,18 @@
                     <span class="close">&times;</span>
                     <label id="caption" for="chart1">Top Category Per Month</label>
                     <canvas id="chartbarModal" class="modal-content"></canvas>
+                </article>
+
+                <article id="myModal" class="modal c">
+                    <span class="close">&times;</span>
+                    <label id="caption" for="chart2">Top 10 Most Sold Product</label>
+                    <canvas id="chartProductModal" class="modal-content"></canvas>
+                </article>
+
+                <article id="myModal" class="modal c">
+                    <span class="close">&times;</span>
+                    <label id="caption" for="chart2">Average Transaction Value Per Payment Method</label>
+                    <canvas id="piechartModal" class="modal-content"></canvas>
                 </article>
 
             </section>

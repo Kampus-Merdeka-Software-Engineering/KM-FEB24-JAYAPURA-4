@@ -32,11 +32,47 @@ window.addEventListener('resize', function () {
     }
 });
 
+// Modal syntax
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Get all modals
+    var modals = document.querySelectorAll('[id^="myModal"]');
+
+    // Get all elements that open the modals
+    var imgs = document.querySelectorAll('[id^="myChart"]');
+
+    // Get all <span> elements that close the modals
+    var spans = document.querySelectorAll('.close');
+
+    // Loop through each image and add click event listener
+    imgs.forEach((img, index) => {
+        img.onclick = function() {
+            modals[index].style.display = 'block';
+        }
+    });
+
+    // Loop through each span and add click event listener
+    spans.forEach((span, index) => {
+        span.onclick = function() {
+            modals[index].style.display = 'none';
+        }
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        modals.forEach((modal) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+});
+
 // Average Transaction Value Per Payment Method
+
 // function to init data
 async function initData(dataset) {
     //request payment method
-    const response = await fetch('/data/payment_method.json')
+    const response = await fetch('./data/payment_method.json')
     // convert fetch response to object
     const responseJSON = await response.json()
     const datasetData = responseJSON.dataset.find(item => Object.keys(item)[0] === dataset);
@@ -48,10 +84,12 @@ async function initData(dataset) {
 }
 
 
-let chartInstance2 = null;
+let chartInstance2;
+let chartModalInstance2;
 // script to generate pie chart payment methods
 async function generatePaymentMethodsChart(responseData) {
     const ctx = document.getElementById('piechart');
+    const ctxModal = document.getElementById('piechartModal');
 
     // convert response to data
     const chartData = []
@@ -102,7 +140,33 @@ async function generatePaymentMethodsChart(responseData) {
                             weight: 'bold',
                         }
                     },
-                    position: 'right',
+                    position: 'bottom',
+                },
+            }
+        }
+    });
+
+    if (chartModalInstance2) {
+        chartModalInstance2.destroy();
+    }
+    chartModalInstance2 = new Chart(ctxModal, {
+        type: 'pie',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    fullSize: true,
+                    labels: {
+                        boxWidth: window.innerWidth > 768 ? 25 : 20,
+                        boxHeight: window.innerWidth > 768 ? 7 : 5,
+                        width: "100%",
+                        font: {
+                            size: window.innerWidth > 768 ? 10 : 7,
+                            weight: 'bold',
+                        }
+                    },
+                    position: 'bottom',
                 },
             }
         }
@@ -111,10 +175,10 @@ async function generatePaymentMethodsChart(responseData) {
 }
 
 
-// called on first render
-// initData()
+// Top Category Per Month
 
-// chart 1
+let chartInstance;
+let chartModalInstance;
 
 // Function to fetch data from JSON file
 async function fetchDataFromJson(dataset) {
@@ -129,156 +193,165 @@ async function fetchDataFromJson(dataset) {
     }));
 }
 
+// function to render chart
+async function renderChart(data) {
+    const ctx = document.getElementById('chartbar').getContext('2d');
+    const ctxModal = document.getElementById('chartbarModal').getContext('2d');
+    const uniqueMonths = [...new Set(data.map(item => item.month))]; // Extract value bulan unik
 
-// Top Category Per Month
+    const foodData = data.filter(item => item.category === 'Food').map(item => item.Total_Penjualan);
+    const waterData = data.filter(item => item.category === 'Water').map(item => item.Total_Penjualan);
+    const carbonatedData = data.filter(item => item.category === 'Carbonated').map(item => item.Total_Penjualan);
+    const nonCarbonatedData = data.filter(item => item.category === 'Non Carbonated').map(item => item.Total_Penjualan);
 
-// Global variable to hold the chart instance
-let chartInstance = null;
-
-// Function to fetch data from JSON file
-async function fetchDataFromJson(dataset) {
-    const response = await fetch('./data/chart1.json');
-    const data = await response.json();
-    const datasetData = data.dataset.find(item => Object.keys(item)[0] === dataset);
-    console.log(data)
-    return datasetData[dataset].map(row => ({
-        month: row.Bulan,
-        category: row.Category,
-        Total_Penjualan: Number(row.Total_Penjualan)
-    }));
-}
-
-// Top Category Per Month
-// Top Category Per Month
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Get the modal
-    var modal = document.getElementById('myModal');
-
-    // Get the element that opens the modal
-    var img = document.getElementById('myChart');
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName('close')[0];
-
-    // When the user clicks on the image, open the modal
-    img.onclick = function() {
-        modal.style.display = 'block';
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = 'none';
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
+    const datasets = [
+        {
+            label: 'Food',
+            data: foodData,
+            backgroundColor: '#000080',
+            borderColor: '#000080',
+            borderWidth: 1
+        },
+        {
+            label: 'Water',
+            data: waterData,
+            backgroundColor: '#1E90FF',
+            borderColor: '#1E90FF',
+            borderWidth: 1
+        },
+        {
+            label: 'Carbonated',
+            data: carbonatedData,
+            backgroundColor: '#00BFFF',
+            borderColor: '#00BFFF',
+            borderWidth: 1
+        },
+        {
+            label: 'Non Carbonated',
+            data: nonCarbonatedData,
+            backgroundColor: '#ADD8E6',
+            borderColor: '#ADD8E6',
+            borderWidth: 1
         }
+    ];
+
+    // Destroy existing chart instance if exists
+    if (chartInstance) {
+        chartInstance.destroy();
     }
-});
 
-
-    async function renderChart(data) {
-        const ctx = document.getElementById('chartbar').getContext('2d');
-        const uniqueMonths = [...new Set(data.map(item => item.month))]; // Extract value bulan unik
-        // const categories = ['Food', 'Water', 'Carbonated', 'Non Carbonated'];
-
-        const foodData = data.filter(item => item.category === 'Food').map(item => item.Total_Penjualan);
-        const waterData = data.filter(item => item.category === 'Water').map(item => item.Total_Penjualan);
-        const carbonatedData = data.filter(item => item.category === 'Carbonated').map(item => item.Total_Penjualan);
-        const nonCarbonatedData = data.filter(item => item.category === 'Non Carbonated').map(item => item.Total_Penjualan);
-
-        const datasets = [
-            {
-                label: 'Food',
-                data: foodData,
-                backgroundColor: '#000080',
-                borderColor: '#000080',
-                borderWidth: 1
-            },
-            {
-                label: 'Water',
-                data: waterData,
-                backgroundColor: '#1E90FF',
-                borderColor: '#1E90FF',
-                borderWidth: 1
-            },
-            {
-                label: 'Carbonated',
-                data: carbonatedData,
-                backgroundColor: '#00BFFF',
-                borderColor: '#00BFFF',
-                borderWidth: 1
-            },
-            {
-                label: 'Non Carbonated',
-                data: nonCarbonatedData,
-                backgroundColor: '#ADD8E6',
-                borderColor: '#ADD8E6',
-                borderWidth: 1
-            }
-        ];
-
-        // Destroy existing chart instance if exists
-        if (chartInstance) {
-            chartInstance.destroy();
-        }
-
-        // Create new chart instance
-        chartInstance = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: uniqueMonths,
-                datasets: datasets
-            },
-            options: {
-                responsive: true,
-                indexAxis: 'y',
-                scales: {
-                    x: {
-                        ticks: {
-                            font: {
-                                weight: 'bold',
-                                size: window.innerWidth > 768 ? 10 : 7
-                            }
-                        },
-                        stacked: true,
+    // Create new chart instance
+    chartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: uniqueMonths,
+            datasets: datasets
+        },
+        options: {
+            responsive: true,
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    ticks: {
+                        font: {
+                            weight: 'bold',
+                            size: window.innerWidth > 768 ? 10 : 7
+                        }
                     },
-                    y: {
-                        ticks: {
-                            font: {
-                                weight: 'bold',
-                                size: window.innerWidth > 768 ? 10 : 7
-                            }
-                        },
-                        stacked: true
-                    }
+                    stacked: true,
                 },
-                plugins: {
-                    tooltips: {
-                    displayColors: true,
-                        callbacks: {
-                            mode: 'x',
-                        },
+                y: {
+                    ticks: {
+                        font: {
+                            weight: 'bold',
+                            size: window.innerWidth > 768 ? 10 : 7
+                        }
                     },
-                    legend: {
-                        labels: {
-                            boxWidth: window.innerWidth > 768 ? 25 : 20,
-                            boxHeight: window.innerWidth > 768 ? 7 : 5,
-                            width: "100%",
-                            font: {
-                                size: window.innerWidth > 768 ? 10 : 7,
-                                weight: 'bold'
-                            }
+                    stacked: true
+                }
+            },
+            plugins: {
+                tooltips: {
+                    displayColors: true,
+                    callbacks: {
+                        mode: 'x',
+                    },
+                },
+                legend: {
+                    responsive: true,
+                    fullSize: true,
+                    labels: {
+                        boxWidth: window.innerWidth > 768 ? 25 : 20,
+                        boxHeight: window.innerWidth > 768 ? 7 : 5,
+                        width: "100%",
+                        font: {
+                            size: window.innerWidth > 768 ? 10 : 7,
+                            weight: 'bold'
                         }
                     }
-                },
-            }
-        });
-    }
+                }
+            },
+        }
+    });
 
-    
+    if (chartModalInstance) {
+        chartModalInstance.destroy();
+    }
+    chartModalInstance = new Chart(ctxModal, {
+        type: 'bar',
+        data: {
+            labels: uniqueMonths,
+            datasets: datasets
+        },
+        options: {
+            responsive: true,
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    ticks: {
+                        font: {
+                            weight: 'bold',
+                            size: window.innerWidth > 768 ? 10 : 7
+                        }
+                    },
+                    stacked: true,
+                },
+                y: {
+                    ticks: {
+                        font: {
+                            weight: 'bold',
+                            size: window.innerWidth > 768 ? 10 : 7
+                        }
+                    },
+                    stacked: true
+                }
+            },
+            plugins: {
+                tooltips: {
+                    displayColors: true,
+                    callbacks: {
+                        mode: 'x',
+                    },
+                },
+                legend: {
+                    responsive: true,
+                    fullSize: true,
+                    labels: {
+                        boxWidth: window.innerWidth > 768 ? 25 : 20,
+                        boxHeight: window.innerWidth > 768 ? 7 : 5,
+                        width: "100%",
+                        font: {
+                            size: window.innerWidth > 768 ? 10 : 7,
+                            weight: 'bold'
+                        }
+                    }
+                }
+            },
+        }
+    });
+}
+
+
 
 // Top 10 Most Sold Product
 async function fetchData1(dataset) {
@@ -293,6 +366,7 @@ async function fetchData1(dataset) {
 }
 
 let chartInstance1;
+let chartModalInstance1;
 async function renderChart1(data) {
 
         const labels = data.map(item => item.product);
@@ -300,6 +374,7 @@ async function renderChart1(data) {
 
         // Create the chart
         const ctx = document.getElementById('chartproduct').getContext('2d');
+        const ctxModal = document.getElementById('chartProductModal').getContext('2d');
 
         const datasets = [{
             label: 'RQTY',
@@ -315,6 +390,63 @@ async function renderChart1(data) {
         }
 
         chartInstance1 = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: datasets
+            },
+            options: {
+            responsive: true,
+            indexAxis: 'y',// This makes the chart horizontal
+                scales: {
+                    x: {
+                        ticks: {
+                            font: {
+                                weight: 'bold',
+                                size: window.innerWidth > 768 ? 10 : 7
+                            }
+                        },
+                        beginAtZero: true
+                    },
+                    y: {
+                        ticks: {
+                            font: {
+                                weight: 'bold',
+                                size: window.innerWidth > 768 ? 10 : 7
+                            }
+                        }
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    tooltips: {
+                        displayColors: true,
+                        callbacks: {
+                            mode: 'x',
+                        },
+                    },
+                    legend: {
+                        fullSize: true,
+                        labels: {
+                            width: "100%",
+                            boxWidth: window.innerWidth > 768 ? 25 : 20,
+                            boxHeight: window.innerWidth > 768 ? 7 : 5,
+                            font: {
+                                weight: 'bold',
+                                size: window.innerWidth > 768 ? 10 : 7
+                            }
+                        },
+
+                    },
+                }
+            }
+        });
+
+        if (chartModalInstance1) {
+            chartModalInstance1.destroy();
+        }
+
+        chartModalInstance1 = new Chart(ctxModal, {
             type: 'bar',
             data: {
                 labels: labels,
@@ -368,13 +500,28 @@ async function renderChart1(data) {
         });
 }
 
+function resizeCanvas(canvasIds) {
+    canvasIds.forEach(canvasId => {
+        const canvas = document.getElementById(canvasId);
+        var heightRatio = 1.0;
+        canvas.height = canvas.width * heightRatio;
+    });
+}
+
 // Main function to fetch data and render chart
 async function main(dataset) {
     // Fetch data from JSON file
     const data1 = await fetchDataFromJson(dataset);
 
-    // Render chart with fetched data
-    await renderChart(data1);
+    // Initial Render chart with fetched data
+    renderChart(data1);
+    resizeCanvas(['chartbar', 'chartbarModal'])
+
+     // Re-render on window resize
+     window.addEventListener('resize', () => {
+        resizeCanvas(['chartbar', 'chartbarModal']);
+        renderChart(data1);
+    });
     console.log(data1);
 }
 async function main2(dataset) {
@@ -383,6 +530,13 @@ async function main2(dataset) {
 
     // Render chart with fetched data
     await renderChart1(data2);
+    resizeCanvas(['chartproduct', 'chartProductModal'])
+
+     // Re-render on window resize
+     window.addEventListener('resize', () => {
+        resizeCanvas(['chartproduct', 'chartProductModal']);
+        renderChart1(data2);
+    });
     console.log(data2);
 }
 
@@ -421,7 +575,7 @@ function grabData() {
             console.log(data);
             const tabelchart = $("#tabelchart");
             tabelchart.DataTable({
-                scrollY: '200px',
+                scrollY: '170px',
                 scrollCollapse: true,
                 responsive: true,
                 autoWidth: false,

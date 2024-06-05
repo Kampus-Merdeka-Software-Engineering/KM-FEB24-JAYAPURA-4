@@ -385,8 +385,6 @@ li .list-item .description {
     background-color: #ffffff;
     padding: 10px;
     border-radius: 10px;
-    min-height: 100px;
-    min-width: 100px;
     gap: 7px;
 }
 
@@ -426,11 +424,11 @@ li .list-item .description {
     max-height: 90vb;
 }
 
-/* .c #piechart {
+.c #piechart {
     width: 100%;
     height: 90vb;
 }
-
+/*
 .c #chartproduct {
     width: 100%;
     max-height: 90vb;
@@ -658,7 +656,7 @@ table th {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: white; /* Black w/ opacity */
+    background-color: var(--primary-color); /* Black w/ opacity */
   }
   
   /* Modal Content (image) */
@@ -706,7 +704,7 @@ table th {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: #b9acac;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
