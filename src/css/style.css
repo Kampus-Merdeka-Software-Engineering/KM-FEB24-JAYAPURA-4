@@ -421,8 +421,8 @@ li .list-item .description {
 }
 
 .c canvas {
-    width: 100%;
-    max-height: 90vb;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .c #piechart {

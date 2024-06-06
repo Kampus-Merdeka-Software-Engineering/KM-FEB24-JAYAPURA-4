@@ -565,7 +565,7 @@ function grabData() {
             `);
 
             tabelchart.DataTable({
-                scrollY: window.innerWidth > 576 ? '200px' : '100px',
+                scrollY: window.innerWidth > 576 ? '180px' : '100px',
                 scrollX: true,
                 scrollCollapse: true,
                 responsive: true,
