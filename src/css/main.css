@@ -39,12 +39,16 @@ section.about .kolom {
 .wrapper img {
   width: 500px;
   height: auto;
-  margin-right: 20px;
   border-radius: 10px;
+  margin-left: 20px;
 }
 
 .wrapper section .kolom {
   flex: 1; /* Mengisi ruang yang tersedia di sebelah kanan gambar */
+}
+
+.wrapper p {
+  text-align: justify;
 }
 
 .timeline {
