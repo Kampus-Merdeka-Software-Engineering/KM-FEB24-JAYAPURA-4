@@ -551,8 +551,22 @@ function grabData() {
         .then(data => {
             console.log(data);
             const tabelchart = $("#tabelchart");
+
+            // Add table head
+            tabelchart.html(`
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Month</th>
+                        <th>Avg_price</th>
+                        <th>quantity sold</th>
+                    </tr>
+                </thead>
+            `);
+
             tabelchart.DataTable({
                 scrollY: window.innerWidth > 576 ? '200px' : '100px',
+                scrollX: true,
                 scrollCollapse: true,
                 responsive: true,
                 autoWidth: false,

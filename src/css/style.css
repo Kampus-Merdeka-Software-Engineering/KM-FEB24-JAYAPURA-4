@@ -265,7 +265,7 @@ li .list-item .description {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 45px;
+    padding: 35px;
     gap: 45px;
 }
 

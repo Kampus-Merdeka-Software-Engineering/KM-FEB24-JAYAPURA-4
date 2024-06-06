@@ -150,6 +150,7 @@
 
     .dataTables_wrapper .dataTables_filter {
         margin-top: 0px;
+        margin-bottom: 10px;
     }
 
     .dataTables_info {
@@ -246,6 +247,10 @@
         display: none;
     }
 
+    #content .main_content{
+        padding: 10px;
+    }
+
     #content .main_content .dash-head {
         display: flex;
         flex-direction: column;
@@ -300,6 +305,10 @@
 
     .dataTables_info {
         font-size: 7px;
+    }
+
+    .dataTables_filter input{
+        max-width: 110px;
     }
 
     .paginate_button {
