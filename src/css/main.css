@@ -19,8 +19,15 @@ section.about {
 .about img {
   width: 500px;
   height: auto;
-  margin-right: 20px;
   border-radius: 10px;
+  margin-right: 20px;
+}
+
+.story img {
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 20px;
 }
 
 section.about .kolom {
@@ -34,13 +41,6 @@ section.about .kolom {
   padding: 20px; /* Ruang padding di dalam section */
   border-radius: 10px; /* Sudut bulatan untuk section */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan section */
-}
-
-.wrapper img {
-  width: 500px;
-  height: auto;
-  border-radius: 10px;
-  margin-left: 20px;
 }
 
 .wrapper section .kolom {
