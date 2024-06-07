@@ -1,4 +1,14 @@
 @media screen and (max-width: 1040px) {
+
+    #side-bar.active {
+        width: 220px;
+    }
+
+    #side-bar.active ~ #content {
+        width: calc(100% - 220px);
+        left: 220px;
+    }
+
     .c label {
         color: #0f357b;
         font-size: 12px;
@@ -60,10 +70,6 @@
 
 @media screen and (max-width: 768px) {
 
-    #side-bar.active {
-        width: 230px;
-    }
-
     #side-bar .icon {
         width: 60px;
         height: 70px;
@@ -92,12 +98,6 @@
     .cite {
         font-size: 12px;
     }
-
-    #side-bar.active ~ #content {
-        width: calc(100% - 230px);
-        left: 230px;
-    }
-
 
     #content .main_content .card-score .box-scorecard {
         width: 100%;

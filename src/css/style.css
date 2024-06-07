@@ -417,12 +417,13 @@ li .list-item .description {
     height: 100%;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 .c canvas {
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
 }
 
 .modal.c canvas {
@@ -604,16 +605,19 @@ table th {
 .footer{
     width: 100%;
     display: grid;
+    margin: 0 1px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "f1 f2";
-    padding: 70px 30px 20px;
+    padding: 30px 30px 20px;
+    background-color: #0f357b;
+    border-radius: 20px 20px 0 0;
 }
 
 .cite{
-    font-size: 16px;
+    font-size: 18px;
     grid-area: f1;
-    align-content: end;
-    color: #3375F4;
+    align-content: center;
+    color: #ffffff;
 }
 
 .media{
@@ -628,9 +632,9 @@ table th {
 
 .socialIcn a{
     text-decoration: none;
-    padding: 10px;
+    padding: 5px 10px 5px 10px;
     background-color: #ffffff;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 .socialIcn a i{
