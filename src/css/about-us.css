@@ -104,7 +104,7 @@ section#about h2 {
     }
 
     .team-member .job {
-        font-size: 8px;
+        font-size: 8.9px;
     }
     /* .row {
         gap: 0.5em;
@@ -133,7 +133,7 @@ section#about h2 {
         height: 25px;
     }
     .team-member .job {
-        font-size: 3px;
+        font-size: 5.5px;
     }
     .row {
         gap: 0.2em; /* further reduce gap on very small screens */

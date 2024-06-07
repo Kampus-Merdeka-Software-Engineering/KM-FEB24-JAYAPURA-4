@@ -52,6 +52,10 @@
         font-size: 10px;
     }
 
+    .cite {
+        font-size: 14px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -86,7 +90,7 @@
     }
 
     .cite {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     #side-bar.active ~ #content {
