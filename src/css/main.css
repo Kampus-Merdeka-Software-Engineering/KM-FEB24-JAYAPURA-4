@@ -34,7 +34,6 @@ section.about .kolom {
   flex: 1; /* Mengisi ruang yang tersedia di sebelah kanan gambar */
 }
 .wrapper section {
-  margin: auto;
   display: flex;
   margin-bottom: 50px;
   background-color: #f8f9fa; /* Warna latar belakang */
@@ -47,16 +46,11 @@ section.about .kolom {
   flex: 1; /* Mengisi ruang yang tersedia di sebelah kanan gambar */
 }
 
-/* .wrapper p {
-  text-align: justify;
-} */
-
 .timeline {
   display: flex;
   flex-direction: column;
   gap: 20px; /* Memberi jarak antara setiap event timeline */
   position: relative;
-  max-width: 800px;
   margin: 20px auto;
   padding: 20px 0;
 }
@@ -66,7 +60,7 @@ section.garis .timeline::after {
   position: absolute;
   width: 6px;
   background-color: #000000;
-  top: 0; /* Sesuaikan dengan posisi mulai garis */
+  top: 0; 
   bottom: 0;
   left: 50%;
   margin-left: -3px;
@@ -74,6 +68,7 @@ section.garis .timeline::after {
 
 .timeline-event {
   position: relative;
+  padding: 0 15px;
   margin: 20px 0;
   width: 100%;
 }
@@ -113,24 +108,6 @@ section.garis .timeline::after {
   transform: translateX(-110%);
 }
 
-.timeline-event:nth-child(even) .timeline-content::after, .timeline-event:nth-child(odd) .timeline-content::after {
-  content: "";
-  position: absolute;
-  width: 17px; /* Diameter of the dot */
-  height: 17px; /* Diameter of the dot */
-  background-color: #000;
-  border-radius: 50%; /* Makes the dot circular */
-  top: 50%;
-  transform: translateY(-50%);
-}
-.timeline-event:nth-child(even) .timeline-content::after {
-  left: -22px; /* Position the dot to the left of the card */
-}
-
-.timeline-event:nth-child(odd) .timeline-content::after {
-  right: -22px; /* Position the dot to the right of the card */
-}
-
 .timeline-event:hover .timeline-content {
   background-color: #f0f0f0;
   color: #333;
@@ -152,14 +129,14 @@ section.garis .timeline::after {
   border-style: solid;
 }
 
-.timeline-event:nth-child(odd) .timeline-content::before {
+.timeline-event:nth-child(even) .timeline-content::before {
   border-width: 10px 10px 10px 0;
   border-color: transparent #8ba47a transparent transparent;
   left: -10px;
   top: 20px;
 }
 
-.timeline-event:nth-child(even) .timeline-content::before {
+.timeline-event:nth-child(odd) .timeline-content::before {
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #8ba47a;
   right: -10px;
