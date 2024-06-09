@@ -541,9 +541,16 @@ styling to set table width */
     gap: 50px;
 }
 
-.card canvas{
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     width: 100%;
-    height: 320px
+}
+
+.card canvas{
+    width: 100% !important;
+    height: auto !important;
 }
 
 #chartbartotal{
@@ -557,6 +564,7 @@ styling to set table width */
 .main_content .analytics-box .problem {
     display: flex;
     flex-direction: row;
+    align-items: center;
     padding: 10px;
     width: 100%;
 }
