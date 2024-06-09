@@ -194,4 +194,14 @@ section.garis .timeline::after {
     font-size: 9px;
   }
 
+  .timeline-event:nth-child(even) .timeline-content::before {
+    border-width: 7px 7px 7px 0;
+    left: -7px;
+  }
+  
+  .timeline-event:nth-child(odd) .timeline-content::before {
+    border-width: 7px 0 7px 7px;
+    right: -7px;
+  }
+
 }
