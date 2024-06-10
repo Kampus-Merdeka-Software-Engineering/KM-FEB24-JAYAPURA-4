@@ -379,8 +379,8 @@ async function renderChart1(data) {
                 scales: {
                     x: {
                         ticks: {
+                            color:'#8899A6',
                             font: {
-                                color:'#8899A6',
                                 weight: 'bold',
                                 size: window.innerWidth > 576 ? 8 : 5
                             }

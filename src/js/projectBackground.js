@@ -29,6 +29,7 @@ async function fetchDataAndRenderChartRevenue() {
                 scales: {
                     x: {
                         ticks: {
+                            color:'#8899A6',
                             minRotation:0,
                             maxRotation:0,
                             font: {
@@ -40,6 +41,7 @@ async function fetchDataAndRenderChartRevenue() {
                     },
                     y: {
                         ticks: {
+                            color:'#8899A6',
                             font: {
                                 weight: 'bold',
                                 size: window.innerWidth > 768 ? 9 : 7
@@ -57,6 +59,7 @@ async function fetchDataAndRenderChartRevenue() {
                     legend: {
                         fullSize: true,
                         labels: {
+                            color:'#8899A6',
                             boxWidth: window.innerWidth > 768 ? 25 : 20,
                             boxHeight: window.innerWidth > 768 ? 7 : 5,
                             width: "100%",
@@ -106,6 +109,7 @@ async function fetchDataAndRenderChartRevenue2() {
                 scales: {
                     x: {
                         ticks: {
+                            color:'#8899A6',
                             font: {
                                 weight: 'bold',
                                 size: window.innerWidth > 768 ? 9 : 7
@@ -115,6 +119,7 @@ async function fetchDataAndRenderChartRevenue2() {
                     },
                     y: {
                         ticks: {
+                            color:'#8899A6',
                             font: {
                                 weight: 'bold',
                                 size: window.innerWidth > 768 ? 9 : 7
@@ -132,6 +137,7 @@ async function fetchDataAndRenderChartRevenue2() {
                     legend: {
                         fullSize: true,
                         labels: {
+                            color:'#8899A6',
                             boxWidth: window.innerWidth > 768 ? 25 : 20,
                             boxHeight: window.innerWidth > 768 ? 7 : 5,
                             width: "100%",
