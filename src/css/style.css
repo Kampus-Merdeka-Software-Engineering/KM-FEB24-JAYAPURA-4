@@ -464,7 +464,7 @@ styling to set table width */
     max-height: 30px;
     font-size: 13px;
     margin-bottom: 10px;
-    border: 2px solid #493e3e !important;
+    border: 2px solid var(--analytics-text-color) !important;
     color: var(--analytics-text-color);
 }
 
@@ -477,7 +477,7 @@ styling to set table width */
     padding: 5px;
     max-height: 30px;
     font-size: 13px;
-    border: 2px solid #493e3e !important;
+    border: 2px solid var(--analytics-text-color) !important;
 }
 
 .c table {

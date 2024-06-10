@@ -104,7 +104,7 @@ section.garis .timeline::after {
 }
 
 .timeline-content p{
-  color: #d4cdcd;
+  color: var(--analytics-text-color);
 }
 
 .timeline-event:nth-child(even) .timeline-content {
