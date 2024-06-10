@@ -97,9 +97,10 @@ async function generatePaymentMethodsChart(responseData) {
         options: {
             responsive: true,
             plugins: {
-                legend: {
+                legend: { 
                     fullSize: true,
                     labels: {
+                        color:'#8899A6',
                         boxWidth: window.innerWidth > 768 ? 25 : 20,
                         boxHeight: window.innerWidth > 768 ? 7 : 5,
                         width: "100%",
@@ -222,6 +223,7 @@ async function renderChart(data) {
             scales: {
                 x: {
                     ticks: {
+                        color:'#8899A6', 
                         font: {
                             weight: 'bold',
                             size: window.innerWidth > 576 ? 8 : 5
@@ -231,6 +233,7 @@ async function renderChart(data) {
                 },
                 y: {
                     ticks: {
+                        color:'#8899A6',
                         font: {
                             weight: 'bold',
                             size: window.innerWidth > 576 ? 8 : 5
@@ -249,9 +252,11 @@ async function renderChart(data) {
                 legend: {
                     fullSize: true,
                     labels: {
+                        color:'#8899A6',
                         boxWidth: window.innerWidth > 576 ? 8 : 5,
                         boxHeight: window.innerWidth > 576 ? 8 : 5,
                         width: "100%",
+                        
                         font: {
                             size: window.innerWidth > 576 ? 8 : 5,
                             weight: 'bold'
@@ -375,6 +380,7 @@ async function renderChart1(data) {
                     x: {
                         ticks: {
                             font: {
+                                color:'#8899A6',
                                 weight: 'bold',
                                 size: window.innerWidth > 576 ? 8 : 5
                             }
@@ -383,6 +389,7 @@ async function renderChart1(data) {
                     },
                     y: {
                         ticks: {
+                            color:'#8899A6',
                             font: {
                                 weight: 'bold',
                                 size: window.innerWidth > 576 ? 8 : 5
@@ -401,6 +408,7 @@ async function renderChart1(data) {
                     legend: {
                         fullSize: true,
                         labels: {
+                            color:'#8899A6',
                             width: "100%",
                             boxWidth: window.innerWidth > 576 ? 8 : 5,
                             boxHeight: window.innerWidth > 576 ? 8 : 5,
