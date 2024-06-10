@@ -10,7 +10,7 @@ section.about {
   margin: auto;
   display: flex;
   margin-bottom: 50px;
-  background-color: #f8f9fa; /* Warna latar belakang */
+  background-color: var(--content-bg-color); /* Warna latar belakang */
   padding: 20px; /* Ruang padding di dalam section */
   border-radius: 10px; /* Sudut bulatan untuk section */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan section */
@@ -36,7 +36,7 @@ section.about .kolom {
 .wrapper section {
   display: flex;
   margin-bottom: 50px;
-  background-color: #f8f9fa; /* Warna latar belakang */
+  background-color: var(--content-bg-color);; /* Warna latar belakang */
   padding: 20px; /* Ruang padding di dalam section */
   border-radius: 10px; /* Sudut bulatan untuk section */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan section */
@@ -75,10 +75,15 @@ section.garis .timeline::after {
 
 .kolom h2 {
   margin-bottom: 5px;
+  color: var(--analytics-text-color);
+}
+
+.kolom p{
+  color: var(--analytics-text-color);
 }
 
 .timeline-content {
-  background-color: #3375f4;
+  background-color: #1d50ad;
   padding: 20px;
   border-radius: 8px;
   position: relative;
@@ -90,12 +95,16 @@ section.garis .timeline::after {
 
 .timeline-content h3 {
   margin-top: 0;
-  color: #fff;
+  color: #d4cdcd;
 }
 
 .timeline-content .date {
-  color: #d0e6c0;
+  color: #d4cdcd;
   margin-bottom: 10px;
+}
+
+.timeline-content p{
+  color: #d4cdcd;
 }
 
 .timeline-event:nth-child(even) .timeline-content {

@@ -10,7 +10,6 @@
     }
 
     .c label {
-        color: #0f357b;
         font-size: 12px;
         font-weight: bold;
         text-align: center;
@@ -120,6 +119,10 @@
     .c {
         width: 100%;
         /* height: 210px; */
+    }
+
+    .c canvas {
+        height: auto !important;
     }
 
     .c label {
