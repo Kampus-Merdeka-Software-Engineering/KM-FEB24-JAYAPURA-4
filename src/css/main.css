@@ -6,16 +6,6 @@ a.tbl-pink:hover {
   text-decoration: none;
 }
 
-section.about {
-  margin: auto;
-  display: flex;
-  margin-bottom: 50px;
-  background-color: var(--content-bg-color); /* Warna latar belakang */
-  padding: 20px; /* Ruang padding di dalam section */
-  border-radius: 10px; /* Sudut bulatan untuk section */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan section */
-}
-
 .about img {
   width: 500px;
   height: auto;
@@ -33,6 +23,7 @@ section.about {
 section.about .kolom {
   flex: 1; /* Mengisi ruang yang tersedia di sebelah kanan gambar */
 }
+
 .wrapper section {
   display: flex;
   margin-bottom: 50px;
